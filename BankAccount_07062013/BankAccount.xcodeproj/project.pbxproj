@@ -21,6 +21,10 @@
 		2807722A1761BD0C008F8E5C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2807720A1761BD0B008F8E5C /* UIKit.framework */; };
 		2807722B1761BD0C008F8E5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2807720C1761BD0B008F8E5C /* Foundation.framework */; };
 		280772331761BD0C008F8E5C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 280772311761BD0C008F8E5C /* InfoPlist.strings */; };
+		280772401761BDF1008F8E5C /* BankAccountEntityTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2807723F1761BDF1008F8E5C /* BankAccountEntityTest.m */; };
+		280772431761BE0F008F8E5C /* BankAccountEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 280772421761BE0F008F8E5C /* BankAccountEntity.m */; };
+		280772451761C014008F8E5C /* BankAccountDAOTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 280772441761C014008F8E5C /* BankAccountDAOTest.m */; };
+		280772481761C035008F8E5C /* BankAccountDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 280772471761C035008F8E5C /* BankAccountDAO.m */; };
 		F4358467ACAD4ECDB679B674 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07459FB3F3904503AFC272EC /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +58,12 @@
 		280772281761BD0C008F8E5C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		280772301761BD0C008F8E5C /* BankAccountTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BankAccountTests-Info.plist"; sourceTree = "<group>"; };
 		280772321761BD0C008F8E5C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2807723F1761BDF1008F8E5C /* BankAccountEntityTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankAccountEntityTest.m; sourceTree = "<group>"; };
+		280772411761BE0F008F8E5C /* BankAccountEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankAccountEntity.h; sourceTree = "<group>"; };
+		280772421761BE0F008F8E5C /* BankAccountEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankAccountEntity.m; sourceTree = "<group>"; };
+		280772441761C014008F8E5C /* BankAccountDAOTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankAccountDAOTest.m; sourceTree = "<group>"; };
+		280772461761C035008F8E5C /* BankAccountDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankAccountDAO.h; sourceTree = "<group>"; };
+		280772471761C035008F8E5C /* BankAccountDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankAccountDAO.m; sourceTree = "<group>"; };
 		B7D5E7EBF3004A01AE46E53F /* libPods-BankAccountTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BankAccountTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60319E3BE654BFFB4368CAF /* Pods-BankAccountTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankAccountTests.xcconfig"; path = "Pods/Pods-BankAccountTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -124,6 +134,10 @@
 				280772191761BD0B008F8E5C /* AppDelegate.h */,
 				2807721A1761BD0B008F8E5C /* AppDelegate.m */,
 				280772111761BD0B008F8E5C /* Supporting Files */,
+				280772411761BE0F008F8E5C /* BankAccountEntity.h */,
+				280772421761BE0F008F8E5C /* BankAccountEntity.m */,
+				280772461761C035008F8E5C /* BankAccountDAO.h */,
+				280772471761C035008F8E5C /* BankAccountDAO.m */,
 			);
 			path = BankAccount;
 			sourceTree = "<group>";
@@ -146,6 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				2807722F1761BD0C008F8E5C /* Supporting Files */,
+				2807723F1761BDF1008F8E5C /* BankAccountEntityTest.m */,
+				280772441761C014008F8E5C /* BankAccountDAOTest.m */,
 			);
 			path = BankAccountTests;
 			sourceTree = "<group>";
@@ -330,6 +346,8 @@
 			files = (
 				280772171761BD0B008F8E5C /* main.m in Sources */,
 				2807721B1761BD0B008F8E5C /* AppDelegate.m in Sources */,
+				280772431761BE0F008F8E5C /* BankAccountEntity.m in Sources */,
+				280772481761C035008F8E5C /* BankAccountDAO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +355,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				280772401761BDF1008F8E5C /* BankAccountEntityTest.m in Sources */,
+				280772451761C014008F8E5C /* BankAccountDAOTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
