@@ -1,0 +1,56 @@
+10
+
+dir
+0
+https://github.com/hunglv/StringCalculator.git/BankAccount/BankAccountTest
+https://github.com/hunglv/StringCalculator.git
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+b646e440-750e-bfcb-392e-ce57b7db7bff
+
+BankAccountEntityTest.m
+file
+
+
+
+add
+
+en.lproj
+dir
+
+
+
+add
+
+BankAccountTest-Info.plist
+file
+
+
+
+add
+
+BankAccountTest-Prefix.pch
+file
+
+
+
+add
+

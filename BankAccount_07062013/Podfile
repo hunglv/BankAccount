@@ -1,0 +1,5 @@
+platform :osx
+pod 'FMDB', '~> 2.1'
+  target :BankAccountTest, :exclusive => true do
+      pod 'Kiwi'
+  end
