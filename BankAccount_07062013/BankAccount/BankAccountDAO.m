@@ -23,8 +23,7 @@
     NSString *stm = nil;
     FMResultSet *r = [dataAccessHelper executeQuery:stm];
     BankAccountEntity *entity = [[BankAccountEntity alloc] init];
-    if ([r next]) {
-        
+    if ([r next]) {        
         entity.accountNumber = [r objectForColumnName:@"accountNumber"];
         entity.balance = [r objectForColumnName:@"balance"];
         entity.openTimestamp = [r objectForColumnName:@"openTimestamp"];
