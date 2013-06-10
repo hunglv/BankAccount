@@ -10,4 +10,8 @@
 
 @interface BankAccountEntity : NSObject
 
+@property (nonatomic, strong) NSString *accountNumber;
+@property (nonatomic, strong) NSNumber *balance;
+@property (nonatomic, strong) NSDate *openTimestamp;
+
 @end

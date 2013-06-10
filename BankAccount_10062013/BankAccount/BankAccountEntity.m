@@ -10,4 +10,19 @@
 
 @implementation BankAccountEntity
 
+@synthesize accountNumber;
+@synthesize balance;
+@synthesize openTimestamp;
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        accountNumber = [[NSString alloc] init];
+        balance = [NSNumber numberWithInteger:0];
+        openTimestamp = [NSDate date];
+    }
+    return self;
+}
+
 @end
