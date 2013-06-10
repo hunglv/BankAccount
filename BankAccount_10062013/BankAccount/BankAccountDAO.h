@@ -8,11 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "FMDatabase.h"
+#import "BankAccountEntity.h"
 
 @interface BankAccountDAO : NSObject
 
 - (id)initWithDatabaseAccess:(FMDatabase *)dataAccess;
 
 @property (nonatomic, strong) FMDatabase *dataAccessHelper;
-
+- (NSNumber *)insertEntity:(BankAccountEntity *)entity;
+- (BankAccountEntity *)getAccountWithAccountNumber:(NSString *)number;
+- (BankAccountEntity *)deposit:(NSString *)accNumb amount:(NSNumber *)number description:(NSString *)description;
 @end
