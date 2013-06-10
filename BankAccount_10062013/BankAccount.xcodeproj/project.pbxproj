@@ -23,6 +23,8 @@
 		280772331761BD0C008F8E5C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 280772311761BD0C008F8E5C /* InfoPlist.strings */; };
 		28866C111765AD2F00FBA900 /* BankAccountEntityTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 28866C101765AD2F00FBA900 /* BankAccountEntityTest.m */; };
 		28866C141765AD4300FBA900 /* BankAccountEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 28866C131765AD4300FBA900 /* BankAccountEntity.m */; };
+		28866C161765AFAC00FBA900 /* BankAccountDAOTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 28866C151765AFAC00FBA900 /* BankAccountDAOTest.m */; };
+		28866C191765AFDC00FBA900 /* BankAccountDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 28866C181765AFDC00FBA900 /* BankAccountDAO.m */; };
 		F4358467ACAD4ECDB679B674 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07459FB3F3904503AFC272EC /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,9 @@
 		28866C101765AD2F00FBA900 /* BankAccountEntityTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankAccountEntityTest.m; sourceTree = "<group>"; };
 		28866C121765AD4300FBA900 /* BankAccountEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankAccountEntity.h; sourceTree = "<group>"; };
 		28866C131765AD4300FBA900 /* BankAccountEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankAccountEntity.m; sourceTree = "<group>"; };
+		28866C151765AFAC00FBA900 /* BankAccountDAOTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankAccountDAOTest.m; sourceTree = "<group>"; };
+		28866C171765AFDC00FBA900 /* BankAccountDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankAccountDAO.h; sourceTree = "<group>"; };
+		28866C181765AFDC00FBA900 /* BankAccountDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankAccountDAO.m; sourceTree = "<group>"; };
 		B7D5E7EBF3004A01AE46E53F /* libPods-BankAccountTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BankAccountTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60319E3BE654BFFB4368CAF /* Pods-BankAccountTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankAccountTests.xcconfig"; path = "Pods/Pods-BankAccountTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -131,6 +136,8 @@
 				280772111761BD0B008F8E5C /* Supporting Files */,
 				28866C121765AD4300FBA900 /* BankAccountEntity.h */,
 				28866C131765AD4300FBA900 /* BankAccountEntity.m */,
+				28866C171765AFDC00FBA900 /* BankAccountDAO.h */,
+				28866C181765AFDC00FBA900 /* BankAccountDAO.m */,
 			);
 			path = BankAccount;
 			sourceTree = "<group>";
@@ -154,6 +161,7 @@
 			children = (
 				2807722F1761BD0C008F8E5C /* Supporting Files */,
 				28866C101765AD2F00FBA900 /* BankAccountEntityTest.m */,
+				28866C151765AFAC00FBA900 /* BankAccountDAOTest.m */,
 			);
 			path = BankAccountTests;
 			sourceTree = "<group>";
@@ -339,6 +347,7 @@
 				280772171761BD0B008F8E5C /* main.m in Sources */,
 				2807721B1761BD0B008F8E5C /* AppDelegate.m in Sources */,
 				28866C141765AD4300FBA900 /* BankAccountEntity.m in Sources */,
+				28866C191765AFDC00FBA900 /* BankAccountDAO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28866C111765AD2F00FBA900 /* BankAccountEntityTest.m in Sources */,
+				28866C161765AFAC00FBA900 /* BankAccountDAOTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
