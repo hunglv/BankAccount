@@ -43,6 +43,10 @@ describe(@"BankAccountDAO test", ^{
             BankAccountEntity *accountGet = [dao getAccount:accountNumberWillGet];
             [[accountGet.accountNumber should] equal:bankAccountShouldRecive.accountNumber];
         });
+        
+        it(@"test open account", ^{
+            
+        });
     });
 });
 SPEC_END
