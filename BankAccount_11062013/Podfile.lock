@@ -1,0 +1,17 @@
+PODS:
+  - FMDB (2.1):
+    - FMDB/standard
+  - FMDB/common (2.1)
+  - FMDB/standard (2.1):
+    - FMDB/common
+  - Kiwi (2.1)
+
+DEPENDENCIES:
+  - FMDB (~> 2.1)
+  - Kiwi
+
+SPEC CHECKSUMS:
+  FMDB: 66010e9b750838dea71748df591fc118598f21c7
+  Kiwi: 054ef97d0e50c279b21113a0880a906fa153a7fd
+
+COCOAPODS: 0.19.1
