@@ -80,12 +80,11 @@ describe(@"BankAccount test", ^{
             
             KWCaptureSpy *spy = [sut captureArgument:@selector(getAccountWithAccountNUmber:success:fail:) atIndex:1];    
             
+            KWCaptureSpy *spy1 = [mockDAO captureArgument:@selector(depositAccount:withAmount:description:success:fail:) atIndex:3];
             
             [sut depositWithAccountNUmber:accountNumberString amount:@10 description:nil success:^(Account *acc) {
                 realAccount = acc;
-            } fail:nil];
-            
-            KWCaptureSpy *spy1 = [mockDAO captureArgument:@selector(depositAccount:withAmount:description:success:fail:) atIndex:3];
+            } fail:nil];           
             
             void (^sucsessGetBlock)(Account *account) = spy.argument;
             sucsessGetBlock(accountBerforeDeposit);
