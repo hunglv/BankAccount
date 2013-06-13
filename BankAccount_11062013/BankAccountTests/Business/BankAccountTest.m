@@ -15,7 +15,7 @@ describe(@"BankAccount test", ^{
     __block BankAccount *sut;
     
     beforeEach(^{
-        mockDAO = [BankAccountDAO mock];
+        mockDAO = [BankAccountDAO nullMock];
         sut = [[BankAccount alloc] initWithDAO:mockDAO];
     });
     
@@ -73,29 +73,108 @@ describe(@"BankAccount test", ^{
             NSString *accountNumberString = [NSString nullMock];
             __block Account *accountBerforeDeposit = [Account nullMock];
             __block Account *accountAfterDeposit = [Account mock];
-            
             __block Account *realAccount;
-            
-            [[mockDAO should] receive:@selector(getAccountWithAccountNUmber:success:fail:)];
             
             KWCaptureSpy *spy = [sut captureArgument:@selector(getAccountWithAccountNUmber:success:fail:) atIndex:1];    
             
             KWCaptureSpy *spy1 = [mockDAO captureArgument:@selector(depositAccount:withAmount:description:success:fail:) atIndex:3];
             
-            [sut depositWithAccountNUmber:accountNumberString amount:@10 description:nil success:^(Account *acc) {
+            [sut depositWithAccountNUmber:accountNumberString amount:@10 description:nil success:^(Account *acc, AccountLog *accLog) {
                 realAccount = acc;
             } fail:nil];           
             
             void (^sucsessGetBlock)(Account *account) = spy.argument;
             sucsessGetBlock(accountBerforeDeposit);
             
-            void (^successDepositBlock)(Account *account) = spy1.argument;
-            successDepositBlock(accountAfterDeposit);
+            void (^successDepositBlock)(NSDictionary *dict) = spy1.argument;
+            successDepositBlock(@{@"account":accountAfterDeposit});
             
             [accountAfterDeposit stub:@selector(balance) andReturn:@([accountBerforeDeposit.balance integerValue] + 10)];
             
             [[realAccount.balance should] equal:@([accountBerforeDeposit.balance integerValue] + 10)]; // real account should increase 10
         });
+        
+        it(@"deposte an account with amount should add an accountLog to database", ^{
+            NSString *accountNumberString = [NSString nullMock];
+            NSString *descriptionString = [NSString nullMock];
+            __block Account *accountBerforeDeposit = [Account nullMock];
+            __block Account *accountAfterDeposit = [Account nullMock];
+            __block AccountLog *accountLogAfterDepost = [AccountLog nullMock];
+            __block NSNumber *amountWillDespote = [NSNumber nullMock];
+            __block AccountLog *realAccountLog;
+            
+            KWCaptureSpy *spy = [sut captureArgument:@selector(getAccountWithAccountNUmber:success:fail:) atIndex:1];
+            
+            KWCaptureSpy *spy1 = [mockDAO captureArgument:@selector(depositAccount:withAmount:description:success:fail:) atIndex:3];
+            
+            [[sut should] receive:@selector(getAccountWithAccountNUmber:success:fail:) withArguments:accountNumberString,any(),any()];
+            [sut depositWithAccountNUmber:accountNumberString amount:amountWillDespote description:descriptionString success:^(Account *acc, AccountLog *accLog) {
+                realAccountLog = accLog;
+            } fail:nil];
+            
+            void (^sucsessGetBlock)(Account *account) = spy.argument;
+            sucsessGetBlock(accountBerforeDeposit);
+            
+            void (^successDepositBlock)(NSDictionary *dict) = spy1.argument;
+            successDepositBlock(@{@"account":accountAfterDeposit, @"accountLog":accountLogAfterDepost});
+                        
+            [[realAccountLog should] equal:accountLogAfterDepost];
+        });
+        
+        it(@"withDraw an account", ^{
+            NSString *accountNumberString = [NSString nullMock];
+            NSString *descriptionString = [NSString nullMock];
+            __block Account *accountBerforeWithdraw = [Account nullMock];
+            __block Account *accountAfterWithdraw = [Account nullMock];
+            __block AccountLog *accountLogAfterWithdraw = [AccountLog nullMock];
+            __block NSNumber *amountWillWithdraw = [NSNumber nullMock];
+            __block AccountLog *realAccountLog;
+            __block Account *realAccount;
+            
+            KWCaptureSpy *spy = [sut captureArgument:@selector(getAccountWithAccountNUmber:success:fail:) atIndex:1];
+            
+            KWCaptureSpy *spy1 = [mockDAO captureArgument:@selector(withdrawAccount:withAmount:description:success:fail:) atIndex:3];
+            
+            [[mockDAO should] receive:@selector(withdrawAccount:withAmount:description:success:fail:) withArguments:accountBerforeWithdraw,amountWillWithdraw,descriptionString,any(),any()];
+            [[sut should] receive:@selector(getAccountWithAccountNUmber:success:fail:) withArguments:accountNumberString,any(),any()];
+            
+            [sut withdrawAccountNUmber:accountNumberString amount:amountWillWithdraw description:descriptionString success:^(Account *acc, AccountLog *accLog) {
+                realAccountLog = accLog;
+                realAccount = acc;
+            } fail:nil];
+            void (^sucsessGetBlock)(Account *account) = spy.argument;
+            sucsessGetBlock(accountBerforeWithdraw);
+            
+            void (^successDepositBlock)(NSDictionary *dict) = spy1.argument;
+            successDepositBlock(@{@"account":accountAfterWithdraw, @"accountLog":accountLogAfterWithdraw});
+            
+            [[realAccountLog should] equal:accountLogAfterWithdraw];
+            [[realAccount should] equal:accountAfterWithdraw];
+        });
+        
+    });
+    
+    context(@"Account transaction", ^{
+        it(@"convertDate funtion test", ^{
+        });
+        
+       it(@"Get transaction with Agument newestTrans, startTime, stopTime, accountNumber", ^{
+           NSString *accountNumberMock = [NSString nullMock];
+           NSDate *timeMock = [NSDate nullMock];
+           NSNumber *newestTransMock = [NSNumber nullMock];
+           
+           NSString *timeStringMock = [NSString nullMock];
+           
+           __block Account *accountMock;
+           
+           [[sut should] receive:@selector(convertDate:) andReturn:timeStringMock withCount:2 arguments:timeMock];
+           [[sut should] receive:@selector(getAccountWithAccountNUmber:success:fail:) andReturn:accountMock withArguments:accountNumberMock,any(), any()];
+           
+           [sut getTransWithNewestTransNumb:newestTransMock accountNumber:accountNumberMock startTime:timeMock stopTime:timeMock success:^(Account *account, NSArray *trans) {
+               
+           } fail:nil];
+           
+       });
     });
 });
 SPEC_END

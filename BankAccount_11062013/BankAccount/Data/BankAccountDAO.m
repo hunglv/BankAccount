@@ -18,7 +18,11 @@
     
 }
 
-- (void)depositAccount:(Account *)account withAmount:(NSNumber *)amount description:(NSString *)des success:(void (^)(Account * acc))block fail:(void (^)(NSError *error)) eBlock  {
+- (void)depositAccount:(Account *)account withAmount:(NSNumber *)amount description:(NSString *)des success:(void (^)(NSDictionary * acc))block fail:(void (^)(NSError *error)) eBlock  {
+    
+}
+
+- (void)withdrawAccount:(Account *)account withAmount:(NSNumber *)amount description:(NSString *)des success:(void (^)(NSDictionary * dict))block fail:(void (^)(NSError *error)) eBlock {
     
 }
 

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "BankAccountDAO.h"
 
+@class AccountLog;
 
 @interface BankAccount : NSObject
 
@@ -22,6 +23,12 @@
 
 - (void)getAccountWithAccountNUmber:(NSString *)accountString success:(void (^)(Account * acc))block fail:(void (^)(NSError *error)) eBlock ;
 
-- (void)depositWithAccountNUmber:(NSString *)accountString amount:(NSNumber *)amount description:(NSString *)descrip success:(void (^)(Account * acc))block fail:(void (^)(NSError *error)) eBlock ;
+- (void)depositWithAccountNUmber:(NSString *)accountString amount:(NSNumber *)amount description:(NSString *)descrip success:(void (^)(Account * acc,AccountLog *accLog))block fail:(void (^)(NSError *error)) eBlock ;
+
+- (NSDate *)timeStampNow;
+
+- (void)withdrawAccountNUmber:(NSString *)accountString amount:(NSNumber *)amount description:(NSString *)descrip success:(void (^)(Account * acc,AccountLog *accLog))block fail:(void (^)(NSError *error)) eBlock ;
+
+- (void)getTransWithNewestTransNumb:(NSNumber *)number accountNumber:(NSString *)accountNumber startTime:(NSDate *)startTime stopTime:(NSDate *)stopTime success:(void(^)(Account *account, NSArray *trans))block fail:(void(^)(NSError *error))fBlock;
 
 @end

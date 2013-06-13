@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Account.h"
+#import "AccountLog.h"
 
 @interface BankAccountDAO : NSObject
 
@@ -15,6 +16,8 @@
 
 - (void)getAccountWithAccountNUmber:(NSString *)accountString success:(void (^)(Account * acc))block fail:(void (^)(NSError *error)) eBlock ;
 
-- (void)depositAccount:(Account *)account withAmount:(NSNumber *)amount description:(NSString *)des success:(void (^)(Account * acc))block fail:(void (^)(NSError *error)) eBlock ;
+- (void)depositAccount:(Account *)account withAmount:(NSNumber *)amount description:(NSString *)des success:(void (^)(NSDictionary * dict))block fail:(void (^)(NSError *error)) eBlock ;// If success dict will return with format {@"account" : account_objcect, @"accountLog":account_log_object}
+
+- (void)withdrawAccount:(Account *)account withAmount:(NSNumber *)amount description:(NSString *)des success:(void (^)(NSDictionary * dict))block fail:(void (^)(NSError *error)) eBlock;
 
 @end

@@ -25,6 +25,7 @@
 		28708A9E1766FE1E000C938F /* BankAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 28708A9D1766FE1E000C938F /* BankAccount.m */; };
 		28708AA11766FE7D000C938F /* BankAccountDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 28708AA01766FE7D000C938F /* BankAccountDAO.m */; };
 		28708AA41766FFF5000C938F /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 28708AA31766FFF5000C938F /* Account.m */; };
+		28BA839517684F380075BDA3 /* AccountLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BA839417684F380075BDA3 /* AccountLog.m */; };
 		F4358467ACAD4ECDB679B674 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07459FB3F3904503AFC272EC /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,8 @@
 		28708AA01766FE7D000C938F /* BankAccountDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankAccountDAO.m; sourceTree = "<group>"; };
 		28708AA21766FFF5000C938F /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
 		28708AA31766FFF5000C938F /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
+		28BA839317684F380075BDA3 /* AccountLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountLog.h; sourceTree = "<group>"; };
+		28BA839417684F380075BDA3 /* AccountLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountLog.m; sourceTree = "<group>"; };
 		B7D5E7EBF3004A01AE46E53F /* libPods-BankAccountTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BankAccountTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60319E3BE654BFFB4368CAF /* Pods-BankAccountTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankAccountTests.xcconfig"; path = "Pods/Pods-BankAccountTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -190,6 +193,8 @@
 				28708AA01766FE7D000C938F /* BankAccountDAO.m */,
 				28708AA21766FFF5000C938F /* Account.h */,
 				28708AA31766FFF5000C938F /* Account.m */,
+				28BA839317684F380075BDA3 /* AccountLog.h */,
+				28BA839417684F380075BDA3 /* AccountLog.m */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -383,6 +388,7 @@
 				28708A9E1766FE1E000C938F /* BankAccount.m in Sources */,
 				28708AA11766FE7D000C938F /* BankAccountDAO.m in Sources */,
 				28708AA41766FFF5000C938F /* Account.m in Sources */,
+				28BA839517684F380075BDA3 /* AccountLog.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
