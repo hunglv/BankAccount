@@ -32,6 +32,10 @@
     return nil;
 }
 
+-(NSString *)convertDate:(NSDate *)datewillConvert withDateFormat:(NSString *)formatString {
+    return nil;
+}
+
 - (void)openNewAccountWithNumber:(NSString *)accountString success:(void (^)(Account * acc))block fail:(void (^)(NSError *error)) eBlock {
     Account *account = [self createAccountWithNumber:accountString];
     [dao insertNewAccount:account success:^(Account *accountInserted) {
@@ -80,6 +84,20 @@
         } fail:^(NSError *error) {
             
         }];
+    } fail:^(NSError *error) {
+        
+    }];
+}
+
+-(void)getTransWithNewestTransNumb:(NSNumber *)number accountNumber:(NSString *)accountNumber startTime:(NSDate *)startTime stopTime:(NSDate *)stopTime success:(void (^)(Account *, NSArray *))block fail:(void (^)(NSError *))fBlock {
+    NSString *startTimeString = [self convertDate:startTime withDateFormat:nil];
+    NSString *stoptimeString = [self convertDate:stopTime withDateFormat:nil];
+    [dao getTransFromAccountNumber:accountNumber start:startTimeString stop:stoptimeString newestTrans:number success:^(NSDictionary *dict) {
+        Account *account = [dict objectForKey:@"account"];
+        NSArray *trans = [dict objectForKey:@"transactions"];
+        if (block) {
+            block(account, trans);
+        }
     } fail:^(NSError *error) {
         
     }];

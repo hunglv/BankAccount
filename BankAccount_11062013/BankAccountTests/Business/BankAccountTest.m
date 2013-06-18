@@ -165,14 +165,25 @@ describe(@"BankAccount test", ^{
            
            NSString *timeStringMock = [NSString nullMock];
            
-           __block Account *accountMock;
+           __block Account *accountReturn;
+           __block NSArray *arrayReturn;
            
-           [[sut should] receive:@selector(convertDate:) andReturn:timeStringMock withCount:2 arguments:timeMock];
-           [[sut should] receive:@selector(getAccountWithAccountNUmber:success:fail:) andReturn:accountMock withArguments:accountNumberMock,any(), any()];
+           Account *accountShouldReturn = [Account nullMock];
+           NSArray *arrayShouldReturn = [NSArray nullMock];
+           
+           [[sut should] receive:@selector(convertDate:withDateFormat:) andReturn:timeStringMock withCount:2 arguments:timeMock,any()];
+           KWCaptureSpy *spy = [mockDAO captureArgument:@selector(getTransFromAccountNumber:start:stop:newestTrans:success:fail:) atIndex:4];
            
            [sut getTransWithNewestTransNumb:newestTransMock accountNumber:accountNumberMock startTime:timeMock stopTime:timeMock success:^(Account *account, NSArray *trans) {
-               
+               accountReturn = account;
+               arrayReturn = trans;
            } fail:nil];
+           
+           void (^successGetFromDAOBlock)(NSDictionary *dict) = spy.argument;
+           successGetFromDAOBlock(@{@"account":accountShouldReturn, @"transactions":arrayShouldReturn});
+           
+           [[accountReturn should] equal:accountShouldReturn];
+           [[arrayReturn should] equal:arrayShouldReturn];
            
        });
     });

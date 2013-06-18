@@ -20,4 +20,6 @@
 
 - (void)withdrawAccount:(Account *)account withAmount:(NSNumber *)amount description:(NSString *)des success:(void (^)(NSDictionary * dict))block fail:(void (^)(NSError *error)) eBlock;
 
+- (void)getTransFromAccountNumber:(NSString *)accountNumber start:(NSString *)startTime stop:(NSString *)stopTime newestTrans:(NSNumber *)number success:(void (^)(NSDictionary * dict))block fail:(void (^)(NSError *error)) eBlock;
+
 @end

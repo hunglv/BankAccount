@@ -31,4 +31,6 @@
 
 - (void)getTransWithNewestTransNumb:(NSNumber *)number accountNumber:(NSString *)accountNumber startTime:(NSDate *)startTime stopTime:(NSDate *)stopTime success:(void(^)(Account *account, NSArray *trans))block fail:(void(^)(NSError *error))fBlock;
 
+- (NSString *)convertDate:(NSDate *) datewillConvert withDateFormat:(NSString *)formatString;
+
 @end

@@ -26,4 +26,8 @@
     
 }
 
+-(void)getTransFromAccountNumber:(NSString *)accountNumber start:(NSString *)startTime stop:(NSString *)stopTime newestTrans:(NSNumber *)number success:(void (^)(NSDictionary *))block fail:(void (^)(NSError *))eBlock {
+    
+}
+
 @end
