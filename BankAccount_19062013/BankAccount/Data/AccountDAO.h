@@ -15,4 +15,6 @@
 
 - (Account *)getAccountWithAccountNumber:(NSString *)accountNumber; // If get fail, will return nil object
 
+- (BOOL)updateAccount:(Account *)accountUpdate;
+
 @end

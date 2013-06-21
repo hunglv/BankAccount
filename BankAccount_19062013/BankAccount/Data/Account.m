@@ -12,5 +12,6 @@
 
 @synthesize accountNumber;
 @synthesize balance;
+@synthesize timeStamp;
 
 @end

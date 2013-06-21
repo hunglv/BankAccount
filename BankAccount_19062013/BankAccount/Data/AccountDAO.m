@@ -18,4 +18,8 @@
     return nil;
 }
 
+-(BOOL)updateAccount:(Account *)accountUpdate {
+    return NO;
+}
+
 @end
