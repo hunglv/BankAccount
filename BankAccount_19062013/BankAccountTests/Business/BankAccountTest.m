@@ -108,5 +108,58 @@ describe(@"BankAccount test", ^{
         });
     });
     
+    context(@"Withdraw account", ^{
+        it(@"Withdraw account with amountnumber, after withdraw account balance will decrease amountnumber", ^{
+            Account *accountBeforWithdraw = [Account nullMock];
+            [accountBeforWithdraw stub:@selector(balance) andReturn:@123];
+            NSNumber *amount = @(100);
+            NSString *description = [NSString nullMock];
+            
+            Account *accountReturn;
+            
+            [sut stub:@selector(getAccount:) andReturn:accountBeforWithdraw withArguments:accountNumber];
+            // Check selector getAccount should be call
+            [[sut should] receive:@selector(getAccount:) andReturn:accountBeforWithdraw withArguments:accountNumber];
+            
+            [mockDAO stub:@selector(updateAccount:) andReturn:theValue(YES) withArguments:accountReturn];
+            // Check mockDAO should call selector updateAccount
+            [[mockDAO should] receive:@selector(updateAccount:) andReturn:theValue(YES) withArguments:any()];
+            
+            accountReturn = [sut withdrawAccountNumber:accountNumber amount:amount description:description];
+            
+            [[accountReturn.balance should] equal:@(accountBeforWithdraw.balance.doubleValue - amount.doubleValue)];
+            
+        });
+        
+        it(@"Withdraw account should call selector insertAccountLog in accountLogDAO object, amount in accountlog should be neagtive", ^{
+            NSNumber *amount = @10;
+            
+            [mockDAO stub:@selector(updateAccount:) andReturn:theValue(YES)];
+            [[accountLogDAO should] receive:@selector(insertAccountLog:)];
+            [[sut should] receive:@selector(createAccountLogWithAccountNumber:amount:description:) withArguments:any(),@(-10), any()];
+            [sut withdrawAccountNumber:[NSString nullMock] amount:amount description:[NSString nullMock]];
+        });
+    });
+    
+    context(@"Get trans with accountNumber", ^{
+        it(@"get trans should call selector getTransactionWithAccountNumber in accountLogDAO object", ^{
+            [[accountLogDAO should] receive:@selector(getTransactionWithAccountNumber:) andReturn:any() withArguments:accountNumber];
+            [sut getTransactionOccuredWithAccountNumber:accountNumber];
+        });
+        
+        it(@"get transaction occured with start time, stop time should call selecter getTransactionWithAccountNumber:start:stop: in accountLog object ", ^{
+            NSDate *start = [NSDate nullMock];
+            NSDate *stop = [NSDate nullMock];
+            [[accountLogDAO should] receive:@selector(getTransactionWithAccountNumber:start:stop:) andReturn:any() withArguments:accountNumber, start, stop];
+            [sut getTransactionOccuredWithAccountNumber:accountNumber start:start stop:stop];
+        });
+        
+        it(@"get transaction occured newest should call selector getTransactionWithAccountNumber:numberNewest:", ^{
+            NSNumber *numberNewest = [NSNumber nullMock];
+            [[accountLogDAO should] receive:@selector(getTransactionWithAccountNumber:numberNewest:) andReturn:any() withArguments:accountNumber,numberNewest];
+            [sut getTransactionOccuredWithAccountNumber:accountNumber numberNewest:numberNewest];
+        });
+    });
+    
 });
 SPEC_END

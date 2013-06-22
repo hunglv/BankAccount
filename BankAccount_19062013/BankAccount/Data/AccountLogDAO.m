@@ -14,4 +14,16 @@
     return NO;
 }
 
+- (NSArray *)getTransactionWithAccountNumber:(NSString *)acc {
+    return nil;
+}
+
+-(NSArray *)getTransactionWithAccountNumber:(NSString *)acc start:(NSDate *)date stop:(NSDate *)stop {
+    return nil;
+}
+
+-(NSArray *)getTransactionWithAccountNumber:(NSString *)acc numberNewest:(NSNumber *)number {
+    return nil;
+}
+
 @end

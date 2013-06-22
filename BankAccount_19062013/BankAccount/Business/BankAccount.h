@@ -26,4 +26,11 @@
 
 @property (nonatomic, strong) AccountLogDAO *accountLogDAO;
 
+- (Account *)withdrawAccountNumber:(NSString *)account amount:(NSNumber *)amount description:(NSString *)description;
+
+- (NSArray *)getTransactionOccuredWithAccountNumber:(NSString *)acc;
+- (NSArray *)getTransactionOccuredWithAccountNumber:(NSString *)acc numberNewest:(NSNumber *)number;
+
+- (NSArray *)getTransactionOccuredWithAccountNumber:(NSString *)acc start:(NSDate *)date stop:(NSDate *)stop;
+
 @end

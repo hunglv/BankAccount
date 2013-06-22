@@ -13,4 +13,10 @@
 
 - (BOOL)insertAccountLog:(AccountLog *)accLog;
 
+- (NSArray *)getTransactionWithAccountNumber:(NSString *)acc;
+
+- (NSArray *)getTransactionWithAccountNumber:(NSString *)acc start:(NSDate *)date stop:(NSDate *)stop;
+
+- (NSArray *)getTransactionWithAccountNumber:(NSString *)acc numberNewest:(NSNumber *)number;
+
 @end
