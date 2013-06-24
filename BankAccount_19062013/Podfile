@@ -1,5 +1,4 @@
 platform :ios ,'5.1'
-pod 'FMDB', '~> 2.1'
   target :BankAccountTests, :exclusive => true do
-      pod 'Kiwi'
+      pod 'Kiwi',  '~> 2.1'
   end

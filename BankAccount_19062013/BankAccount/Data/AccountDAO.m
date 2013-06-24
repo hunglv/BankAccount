@@ -8,7 +8,18 @@
 
 #import "AccountDAO.h"
 
+#import <LocalStorage/LocalStorage.h>
+
+@interface AccountDAO()
+
+@property (nonatomic, strong) FMDatabaseQueue *dataAccessHelper;
+
+@end
+
 @implementation AccountDAO
+
+@synthesize databasePath;
+@synthesize dataAccessHelper = _dataAccessHelper;
 
 -(BOOL)insertNewAccount:(Account *)accountInsert {
     return NO;
@@ -20,6 +31,11 @@
 
 -(BOOL)updateAccount:(Account *)accountUpdate {
     return NO;
+}
+
+-(void)setDatabasePath:(NSString *)_databasePath {
+    databasePath = _databasePath;
+    _dataAccessHelper = [FMDatabaseQueue databaseQueueWithPath:databasePath];
 }
 
 @end

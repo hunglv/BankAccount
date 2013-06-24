@@ -17,4 +17,6 @@
 
 - (BOOL)updateAccount:(Account *)accountUpdate;
 
+@property (nonatomic, strong) NSString *databasePath;
+
 @end

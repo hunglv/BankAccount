@@ -1,600 +1,1475 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		12E4A6673A854E1190ED9774 /* libPods-BankAccountTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7D5E7EBF3004A01AE46E53F /* libPods-BankAccountTests.a */; };
-		2807720B1761BD0B008F8E5C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2807720A1761BD0B008F8E5C /* UIKit.framework */; };
-		2807720D1761BD0B008F8E5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2807720C1761BD0B008F8E5C /* Foundation.framework */; };
-		2807720F1761BD0B008F8E5C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2807720E1761BD0B008F8E5C /* CoreGraphics.framework */; };
-		280772151761BD0B008F8E5C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 280772131761BD0B008F8E5C /* InfoPlist.strings */; };
-		280772171761BD0B008F8E5C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 280772161761BD0B008F8E5C /* main.m */; };
-		2807721B1761BD0B008F8E5C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2807721A1761BD0B008F8E5C /* AppDelegate.m */; };
-		2807721D1761BD0C008F8E5C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2807721C1761BD0C008F8E5C /* Default.png */; };
-		2807721F1761BD0C008F8E5C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2807721E1761BD0C008F8E5C /* Default@2x.png */; };
-		280772211761BD0C008F8E5C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 280772201761BD0C008F8E5C /* Default-568h@2x.png */; };
-		280772291761BD0C008F8E5C /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280772281761BD0C008F8E5C /* SenTestingKit.framework */; };
-		2807722A1761BD0C008F8E5C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2807720A1761BD0B008F8E5C /* UIKit.framework */; };
-		2807722B1761BD0C008F8E5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2807720C1761BD0B008F8E5C /* Foundation.framework */; };
-		280772331761BD0C008F8E5C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 280772311761BD0C008F8E5C /* InfoPlist.strings */; };
-		281C4C3F17718E1A00E941F7 /* BankAccountTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 281C4C3E17718E1A00E941F7 /* BankAccountTest.m */; };
-		281C4C4317718E3B00E941F7 /* BankAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 281C4C4217718E3B00E941F7 /* BankAccount.m */; };
-		281C4C4717718F4600E941F7 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 281C4C4617718F4600E941F7 /* Account.m */; };
-		281C4C4A1771901200E941F7 /* AccountDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 281C4C491771901200E941F7 /* AccountDAO.m */; };
-		2829962617781FA800C64C5F /* LocalStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2829962517781FA800C64C5F /* LocalStorage.framework */; };
-		283095171774379D00AA5E75 /* AccountLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 283095161774379D00AA5E75 /* AccountLog.m */; };
-		2830951A177439BC00AA5E75 /* AccountLogDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 28309519177439BB00AA5E75 /* AccountLogDAO.m */; };
-		F4358467ACAD4ECDB679B674 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07459FB3F3904503AFC272EC /* libPods.a */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		2807722C1761BD0C008F8E5C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 280771FF1761BD0B008F8E5C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 280772061761BD0B008F8E5C;
-			remoteInfo = BankAccount;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		07459FB3F3904503AFC272EC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		1BA6F3786E194C4794BC9EB1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
-		280772071761BD0B008F8E5C /* BankAccount.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankAccount.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2807720A1761BD0B008F8E5C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		2807720C1761BD0B008F8E5C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		2807720E1761BD0B008F8E5C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		280772121761BD0B008F8E5C /* BankAccount-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BankAccount-Info.plist"; sourceTree = "<group>"; };
-		280772141761BD0B008F8E5C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		280772161761BD0B008F8E5C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		280772181761BD0B008F8E5C /* BankAccount-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BankAccount-Prefix.pch"; sourceTree = "<group>"; };
-		280772191761BD0B008F8E5C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		2807721A1761BD0B008F8E5C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2807721C1761BD0C008F8E5C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		2807721E1761BD0C008F8E5C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		280772201761BD0C008F8E5C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		280772271761BD0C008F8E5C /* BankAccountTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankAccountTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		280772281761BD0C008F8E5C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		280772301761BD0C008F8E5C /* BankAccountTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BankAccountTests-Info.plist"; sourceTree = "<group>"; };
-		280772321761BD0C008F8E5C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		281C4C3E17718E1A00E941F7 /* BankAccountTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankAccountTest.m; sourceTree = "<group>"; };
-		281C4C4117718E3B00E941F7 /* BankAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankAccount.h; sourceTree = "<group>"; };
-		281C4C4217718E3B00E941F7 /* BankAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankAccount.m; sourceTree = "<group>"; };
-		281C4C4517718F4600E941F7 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
-		281C4C4617718F4600E941F7 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
-		281C4C481771901200E941F7 /* AccountDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountDAO.h; sourceTree = "<group>"; };
-		281C4C491771901200E941F7 /* AccountDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountDAO.m; sourceTree = "<group>"; };
-		2829962517781FA800C64C5F /* LocalStorage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LocalStorage.framework; sourceTree = "<group>"; };
-		283095151774379D00AA5E75 /* AccountLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountLog.h; sourceTree = "<group>"; };
-		283095161774379D00AA5E75 /* AccountLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountLog.m; sourceTree = "<group>"; };
-		28309518177439BB00AA5E75 /* AccountLogDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountLogDAO.h; sourceTree = "<group>"; };
-		28309519177439BB00AA5E75 /* AccountLogDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountLogDAO.m; sourceTree = "<group>"; };
-		B7D5E7EBF3004A01AE46E53F /* libPods-BankAccountTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BankAccountTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C60319E3BE654BFFB4368CAF /* Pods-BankAccountTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankAccountTests.xcconfig"; path = "Pods/Pods-BankAccountTests.xcconfig"; sourceTree = SOURCE_ROOT; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		280772041761BD0B008F8E5C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2807720B1761BD0B008F8E5C /* UIKit.framework in Frameworks */,
-				2807720D1761BD0B008F8E5C /* Foundation.framework in Frameworks */,
-				2807720F1761BD0B008F8E5C /* CoreGraphics.framework in Frameworks */,
-				F4358467ACAD4ECDB679B674 /* libPods.a in Frameworks */,
-				2829962617781FA800C64C5F /* LocalStorage.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		280772231761BD0C008F8E5C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				280772291761BD0C008F8E5C /* SenTestingKit.framework in Frameworks */,
-				2807722A1761BD0C008F8E5C /* UIKit.framework in Frameworks */,
-				2807722B1761BD0C008F8E5C /* Foundation.framework in Frameworks */,
-				12E4A6673A854E1190ED9774 /* libPods-BankAccountTests.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		280771FE1761BD0B008F8E5C = {
-			isa = PBXGroup;
-			children = (
-				280772101761BD0B008F8E5C /* BankAccount */,
-				2807722E1761BD0C008F8E5C /* BankAccountTests */,
-				280772091761BD0B008F8E5C /* Frameworks */,
-				280772081761BD0B008F8E5C /* Products */,
-				1BA6F3786E194C4794BC9EB1 /* Pods.xcconfig */,
-				C60319E3BE654BFFB4368CAF /* Pods-BankAccountTests.xcconfig */,
-			);
-			sourceTree = "<group>";
-		};
-		280772081761BD0B008F8E5C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				280772071761BD0B008F8E5C /* BankAccount.app */,
-				280772271761BD0C008F8E5C /* BankAccountTests.octest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		280772091761BD0B008F8E5C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2829962517781FA800C64C5F /* LocalStorage.framework */,
-				2807720A1761BD0B008F8E5C /* UIKit.framework */,
-				2807720C1761BD0B008F8E5C /* Foundation.framework */,
-				2807720E1761BD0B008F8E5C /* CoreGraphics.framework */,
-				280772281761BD0C008F8E5C /* SenTestingKit.framework */,
-				07459FB3F3904503AFC272EC /* libPods.a */,
-				B7D5E7EBF3004A01AE46E53F /* libPods-BankAccountTests.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		280772101761BD0B008F8E5C /* BankAccount */ = {
-			isa = PBXGroup;
-			children = (
-				281C4C4417718F3700E941F7 /* Data */,
-				281C4C4017718E2500E941F7 /* Business */,
-				280772191761BD0B008F8E5C /* AppDelegate.h */,
-				2807721A1761BD0B008F8E5C /* AppDelegate.m */,
-				280772111761BD0B008F8E5C /* Supporting Files */,
-			);
-			path = BankAccount;
-			sourceTree = "<group>";
-		};
-		280772111761BD0B008F8E5C /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				280772121761BD0B008F8E5C /* BankAccount-Info.plist */,
-				280772131761BD0B008F8E5C /* InfoPlist.strings */,
-				280772161761BD0B008F8E5C /* main.m */,
-				280772181761BD0B008F8E5C /* BankAccount-Prefix.pch */,
-				2807721C1761BD0C008F8E5C /* Default.png */,
-				2807721E1761BD0C008F8E5C /* Default@2x.png */,
-				280772201761BD0C008F8E5C /* Default-568h@2x.png */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		2807722E1761BD0C008F8E5C /* BankAccountTests */ = {
-			isa = PBXGroup;
-			children = (
-				2830951B17744B2200AA5E75 /* Data */,
-				281C4C3D17718E0700E941F7 /* Business */,
-				2807722F1761BD0C008F8E5C /* Supporting Files */,
-			);
-			path = BankAccountTests;
-			sourceTree = "<group>";
-		};
-		2807722F1761BD0C008F8E5C /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				280772301761BD0C008F8E5C /* BankAccountTests-Info.plist */,
-				280772311761BD0C008F8E5C /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		281C4C3D17718E0700E941F7 /* Business */ = {
-			isa = PBXGroup;
-			children = (
-				281C4C3E17718E1A00E941F7 /* BankAccountTest.m */,
-			);
-			path = Business;
-			sourceTree = "<group>";
-		};
-		281C4C4017718E2500E941F7 /* Business */ = {
-			isa = PBXGroup;
-			children = (
-				281C4C4117718E3B00E941F7 /* BankAccount.h */,
-				281C4C4217718E3B00E941F7 /* BankAccount.m */,
-			);
-			path = Business;
-			sourceTree = "<group>";
-		};
-		281C4C4417718F3700E941F7 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				281C4C4517718F4600E941F7 /* Account.h */,
-				281C4C4617718F4600E941F7 /* Account.m */,
-				281C4C481771901200E941F7 /* AccountDAO.h */,
-				281C4C491771901200E941F7 /* AccountDAO.m */,
-				283095151774379D00AA5E75 /* AccountLog.h */,
-				283095161774379D00AA5E75 /* AccountLog.m */,
-				28309518177439BB00AA5E75 /* AccountLogDAO.h */,
-				28309519177439BB00AA5E75 /* AccountLogDAO.m */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		2830951B17744B2200AA5E75 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		280772061761BD0B008F8E5C /* BankAccount */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 280772391761BD0C008F8E5C /* Build configuration list for PBXNativeTarget "BankAccount" */;
-			buildPhases = (
-				EAEB5ACE42EA455A9BA9B528 /* Check Pods Manifest.lock */,
-				280772031761BD0B008F8E5C /* Sources */,
-				280772041761BD0B008F8E5C /* Frameworks */,
-				280772051761BD0B008F8E5C /* Resources */,
-				19548AECFECF4BACAB6749B8 /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = BankAccount;
-			productName = BankAccount;
-			productReference = 280772071761BD0B008F8E5C /* BankAccount.app */;
-			productType = "com.apple.product-type.application";
-		};
-		280772261761BD0C008F8E5C /* BankAccountTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2807723C1761BD0C008F8E5C /* Build configuration list for PBXNativeTarget "BankAccountTests" */;
-			buildPhases = (
-				CDFD953971274CFCA3A419C3 /* Check Pods Manifest.lock */,
-				280772221761BD0C008F8E5C /* Sources */,
-				280772231761BD0C008F8E5C /* Frameworks */,
-				280772241761BD0C008F8E5C /* Resources */,
-				280772251761BD0C008F8E5C /* ShellScript */,
-				E2943EA5B2DE4941BE883AE4 /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2807722D1761BD0C008F8E5C /* PBXTargetDependency */,
-			);
-			name = BankAccountTests;
-			productName = BankAccountTests;
-			productReference = 280772271761BD0C008F8E5C /* BankAccountTests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		280771FF1761BD0B008F8E5C /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0460;
-				ORGANIZATIONNAME = "El Nino";
-			};
-			buildConfigurationList = 280772021761BD0B008F8E5C /* Build configuration list for PBXProject "BankAccount" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-			);
-			mainGroup = 280771FE1761BD0B008F8E5C;
-			productRefGroup = 280772081761BD0B008F8E5C /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				280772061761BD0B008F8E5C /* BankAccount */,
-				280772261761BD0C008F8E5C /* BankAccountTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		280772051761BD0B008F8E5C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				280772151761BD0B008F8E5C /* InfoPlist.strings in Resources */,
-				2807721D1761BD0C008F8E5C /* Default.png in Resources */,
-				2807721F1761BD0C008F8E5C /* Default@2x.png in Resources */,
-				280772211761BD0C008F8E5C /* Default-568h@2x.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		280772241761BD0C008F8E5C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				280772331761BD0C008F8E5C /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		19548AECFECF4BACAB6749B8 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
-		};
-		280772251761BD0C008F8E5C /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-		CDFD953971274CFCA3A419C3 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-		};
-		E2943EA5B2DE4941BE883AE4 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-BankAccountTests-resources.sh\"\n";
-		};
-		EAEB5ACE42EA455A9BA9B528 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		280772031761BD0B008F8E5C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				280772171761BD0B008F8E5C /* main.m in Sources */,
-				2807721B1761BD0B008F8E5C /* AppDelegate.m in Sources */,
-				281C4C4317718E3B00E941F7 /* BankAccount.m in Sources */,
-				281C4C4717718F4600E941F7 /* Account.m in Sources */,
-				281C4C4A1771901200E941F7 /* AccountDAO.m in Sources */,
-				283095171774379D00AA5E75 /* AccountLog.m in Sources */,
-				2830951A177439BC00AA5E75 /* AccountLogDAO.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		280772221761BD0C008F8E5C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				281C4C3F17718E1A00E941F7 /* BankAccountTest.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		2807722D1761BD0C008F8E5C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 280772061761BD0B008F8E5C /* BankAccount */;
-			targetProxy = 2807722C1761BD0C008F8E5C /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		280772131761BD0B008F8E5C /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				280772141761BD0B008F8E5C /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		280772311761BD0C008F8E5C /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				280772321761BD0C008F8E5C /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		280772371761BD0C008F8E5C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-			};
-			name = Debug;
-		};
-		280772381761BD0C008F8E5C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		2807723A1761BD0C008F8E5C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BA6F3786E194C4794BC9EB1 /* Pods.xcconfig */;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BankAccount/BankAccount-Prefix.pch";
-				INFOPLIST_FILE = "BankAccount/BankAccount-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		2807723B1761BD0C008F8E5C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BA6F3786E194C4794BC9EB1 /* Pods.xcconfig */;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BankAccount/BankAccount-Prefix.pch";
-				INFOPLIST_FILE = "BankAccount/BankAccount-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		2807723D1761BD0C008F8E5C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C60319E3BE654BFFB4368CAF /* Pods-BankAccountTests.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BankAccount.app/BankAccount";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BankAccount/BankAccount-Prefix.pch";
-				INFOPLIST_FILE = "BankAccountTests/BankAccountTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		2807723E1761BD0C008F8E5C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C60319E3BE654BFFB4368CAF /* Pods-BankAccountTests.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BankAccount.app/BankAccount";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BankAccount/BankAccount-Prefix.pch";
-				INFOPLIST_FILE = "BankAccountTests/BankAccountTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		280772021761BD0B008F8E5C /* Build configuration list for PBXProject "BankAccount" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				280772371761BD0C008F8E5C /* Debug */,
-				280772381761BD0C008F8E5C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		280772391761BD0C008F8E5C /* Build configuration list for PBXNativeTarget "BankAccount" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2807723A1761BD0C008F8E5C /* Debug */,
-				2807723B1761BD0C008F8E5C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2807723C1761BD0C008F8E5C /* Build configuration list for PBXNativeTarget "BankAccountTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2807723D1761BD0C008F8E5C /* Debug */,
-				2807723E1761BD0C008F8E5C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 280771FF1761BD0B008F8E5C /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>19548AECFECF4BACAB6749B8</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Pods-resources.sh"
+</string>
+		</dict>
+		<key>280771FE1761BD0B008F8E5C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2829962C1778245300C64C5F</string>
+				<string>280772101761BD0B008F8E5C</string>
+				<string>2807722E1761BD0C008F8E5C</string>
+				<string>280772091761BD0B008F8E5C</string>
+				<string>280772081761BD0B008F8E5C</string>
+				<string>8E2C4F030A6C471A94DE3646</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>280771FF1761BD0B008F8E5C</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0460</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>El Nino</string>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>280772021761BD0B008F8E5C</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>280771FE1761BD0B008F8E5C</string>
+			<key>productRefGroup</key>
+			<string>280772081761BD0B008F8E5C</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>280772061761BD0B008F8E5C</string>
+				<string>280772261761BD0C008F8E5C</string>
+			</array>
+		</dict>
+		<key>280772021761BD0B008F8E5C</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>280772371761BD0C008F8E5C</string>
+				<string>280772381761BD0C008F8E5C</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>280772031761BD0B008F8E5C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>280772171761BD0B008F8E5C</string>
+				<string>2807721B1761BD0B008F8E5C</string>
+				<string>281C4C4317718E3B00E941F7</string>
+				<string>281C4C4717718F4600E941F7</string>
+				<string>281C4C4A1771901200E941F7</string>
+				<string>283095171774379D00AA5E75</string>
+				<string>2830951A177439BC00AA5E75</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>280772041761BD0B008F8E5C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>2829962D1778245300C64C5F</string>
+				<string>2807720B1761BD0B008F8E5C</string>
+				<string>2807720D1761BD0B008F8E5C</string>
+				<string>2807720F1761BD0B008F8E5C</string>
+				<string>2829962617781FA800C64C5F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>280772051761BD0B008F8E5C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>280772151761BD0B008F8E5C</string>
+				<string>2807721D1761BD0C008F8E5C</string>
+				<string>2807721F1761BD0C008F8E5C</string>
+				<string>280772211761BD0C008F8E5C</string>
+				<string>2829962817781FEE00C64C5F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>280772061761BD0B008F8E5C</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>280772391761BD0C008F8E5C</string>
+			<key>buildPhases</key>
+			<array>
+				<string>EAEB5ACE42EA455A9BA9B528</string>
+				<string>280772031761BD0B008F8E5C</string>
+				<string>280772041761BD0B008F8E5C</string>
+				<string>280772051761BD0B008F8E5C</string>
+				<string>19548AECFECF4BACAB6749B8</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>BankAccount</string>
+			<key>productName</key>
+			<string>BankAccount</string>
+			<key>productReference</key>
+			<string>280772071761BD0B008F8E5C</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>280772071761BD0B008F8E5C</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>BankAccount.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>280772081761BD0B008F8E5C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>280772071761BD0B008F8E5C</string>
+				<string>280772271761BD0C008F8E5C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>280772091761BD0B008F8E5C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2829962517781FA800C64C5F</string>
+				<string>2807720A1761BD0B008F8E5C</string>
+				<string>2807720C1761BD0B008F8E5C</string>
+				<string>2807720E1761BD0B008F8E5C</string>
+				<string>280772281761BD0C008F8E5C</string>
+				<string>AE4CAABFE5114793BEDA2675</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2807720A1761BD0B008F8E5C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>UIKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/UIKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>2807720B1761BD0B008F8E5C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2807720A1761BD0B008F8E5C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2807720C1761BD0B008F8E5C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>2807720D1761BD0B008F8E5C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2807720C1761BD0B008F8E5C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2807720E1761BD0B008F8E5C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreGraphics.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreGraphics.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>2807720F1761BD0B008F8E5C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2807720E1761BD0B008F8E5C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>280772101761BD0B008F8E5C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2829962717781FEE00C64C5F</string>
+				<string>281C4C4417718F3700E941F7</string>
+				<string>281C4C4017718E2500E941F7</string>
+				<string>280772191761BD0B008F8E5C</string>
+				<string>2807721A1761BD0B008F8E5C</string>
+				<string>280772111761BD0B008F8E5C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>BankAccount</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>280772111761BD0B008F8E5C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>280772121761BD0B008F8E5C</string>
+				<string>280772131761BD0B008F8E5C</string>
+				<string>280772161761BD0B008F8E5C</string>
+				<string>280772181761BD0B008F8E5C</string>
+				<string>2807721C1761BD0C008F8E5C</string>
+				<string>2807721E1761BD0C008F8E5C</string>
+				<string>280772201761BD0C008F8E5C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>280772121761BD0B008F8E5C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>BankAccount-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>280772131761BD0B008F8E5C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>280772141761BD0B008F8E5C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>280772141761BD0B008F8E5C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>280772151761BD0B008F8E5C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>280772131761BD0B008F8E5C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>280772161761BD0B008F8E5C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>280772171761BD0B008F8E5C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>280772161761BD0B008F8E5C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>280772181761BD0B008F8E5C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>BankAccount-Prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>280772191761BD0B008F8E5C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2807721A1761BD0B008F8E5C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>AppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2807721B1761BD0B008F8E5C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2807721A1761BD0B008F8E5C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2807721C1761BD0C008F8E5C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>Default.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2807721D1761BD0C008F8E5C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2807721C1761BD0C008F8E5C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2807721E1761BD0C008F8E5C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>Default@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2807721F1761BD0C008F8E5C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2807721E1761BD0C008F8E5C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>280772201761BD0C008F8E5C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>Default-568h@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>280772211761BD0C008F8E5C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>280772201761BD0C008F8E5C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>280772221761BD0C008F8E5C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>281C4C3F17718E1A00E941F7</string>
+				<string>2829962A1778214000C64C5F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>280772231761BD0C008F8E5C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>280772291761BD0C008F8E5C</string>
+				<string>2807722A1761BD0C008F8E5C</string>
+				<string>2807722B1761BD0C008F8E5C</string>
+				<string>2829962B1778217700C64C5F</string>
+				<string>ADFE19BAEA694F1F84028DBA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>280772241761BD0C008F8E5C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>280772331761BD0C008F8E5C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>280772251761BD0C008F8E5C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string># Run the unit tests in this test bundle.
+"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests"
+</string>
+		</dict>
+		<key>280772261761BD0C008F8E5C</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>2807723C1761BD0C008F8E5C</string>
+			<key>buildPhases</key>
+			<array>
+				<string>900F27E320624865A9067F78</string>
+				<string>CDFD953971274CFCA3A419C3</string>
+				<string>280772221761BD0C008F8E5C</string>
+				<string>280772231761BD0C008F8E5C</string>
+				<string>280772241761BD0C008F8E5C</string>
+				<string>280772251761BD0C008F8E5C</string>
+				<string>E2943EA5B2DE4941BE883AE4</string>
+				<string>9676ED5C9EBA49BCB6D47C4E</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>2807722D1761BD0C008F8E5C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>BankAccountTests</string>
+			<key>productName</key>
+			<string>BankAccountTests</string>
+			<key>productReference</key>
+			<string>280772271761BD0C008F8E5C</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle</string>
+		</dict>
+		<key>280772271761BD0C008F8E5C</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>BankAccountTests.octest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>280772281761BD0C008F8E5C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>SenTestingKit.framework</string>
+			<key>path</key>
+			<string>Library/Frameworks/SenTestingKit.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>280772291761BD0C008F8E5C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>280772281761BD0C008F8E5C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2807722A1761BD0C008F8E5C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2807720A1761BD0B008F8E5C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2807722B1761BD0C008F8E5C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2807720C1761BD0B008F8E5C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2807722C1761BD0C008F8E5C</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>280771FF1761BD0B008F8E5C</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>280772061761BD0B008F8E5C</string>
+			<key>remoteInfo</key>
+			<string>BankAccount</string>
+		</dict>
+		<key>2807722D1761BD0C008F8E5C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>280772061761BD0B008F8E5C</string>
+			<key>targetProxy</key>
+			<string>2807722C1761BD0C008F8E5C</string>
+		</dict>
+		<key>2807722E1761BD0C008F8E5C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2830951B17744B2200AA5E75</string>
+				<string>281C4C3D17718E0700E941F7</string>
+				<string>2807722F1761BD0C008F8E5C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>BankAccountTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2807722F1761BD0C008F8E5C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>280772301761BD0C008F8E5C</string>
+				<string>280772311761BD0C008F8E5C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>280772301761BD0C008F8E5C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>BankAccountTests-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>280772311761BD0C008F8E5C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>280772321761BD0C008F8E5C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>280772321761BD0C008F8E5C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>280772331761BD0C008F8E5C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>280772311761BD0C008F8E5C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>280772371761BD0C008F8E5C</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>6.1</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>280772381761BD0C008F8E5C</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>6.1</string>
+				<key>OTHER_CFLAGS</key>
+				<string>-DNS_BLOCK_ASSERTIONS=1</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>280772391761BD0C008F8E5C</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>2807723A1761BD0C008F8E5C</string>
+				<string>2807723B1761BD0C008F8E5C</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>2807723A1761BD0C008F8E5C</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>"$(SRCROOT)"</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>BankAccount/BankAccount-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>BankAccount/BankAccount-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>2807723B1761BD0C008F8E5C</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>"$(SRCROOT)"</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>BankAccount/BankAccount-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>BankAccount/BankAccount-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>2807723C1761BD0C008F8E5C</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>2807723D1761BD0C008F8E5C</string>
+				<string>2807723E1761BD0C008F8E5C</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>2807723D1761BD0C008F8E5C</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>8E2C4F030A6C471A94DE3646</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/BankAccount.app/BankAccount</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>"$(SDKROOT)/Developer/Library/Frameworks"</string>
+					<string>"$(DEVELOPER_LIBRARY_DIR)/Frameworks"</string>
+					<string>"$(SRCROOT)"</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>BankAccount/BankAccount-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>BankAccountTests/BankAccountTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>octest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>2807723E1761BD0C008F8E5C</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>8E2C4F030A6C471A94DE3646</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/BankAccount.app/BankAccount</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>"$(SDKROOT)/Developer/Library/Frameworks"</string>
+					<string>"$(DEVELOPER_LIBRARY_DIR)/Frameworks"</string>
+					<string>"$(SRCROOT)"</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>BankAccount/BankAccount-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>BankAccountTests/BankAccountTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>octest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>281C4C3D17718E0700E941F7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>281C4C3E17718E1A00E941F7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Business</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>281C4C3E17718E1A00E941F7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>BankAccountTest.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>281C4C3F17718E1A00E941F7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>281C4C3E17718E1A00E941F7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>281C4C4017718E2500E941F7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>281C4C4117718E3B00E941F7</string>
+				<string>281C4C4217718E3B00E941F7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Business</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>281C4C4117718E3B00E941F7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>BankAccount.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>281C4C4217718E3B00E941F7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>BankAccount.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>281C4C4317718E3B00E941F7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>281C4C4217718E3B00E941F7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>281C4C4417718F3700E941F7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>281C4C4517718F4600E941F7</string>
+				<string>281C4C4617718F4600E941F7</string>
+				<string>281C4C481771901200E941F7</string>
+				<string>281C4C491771901200E941F7</string>
+				<string>283095151774379D00AA5E75</string>
+				<string>283095161774379D00AA5E75</string>
+				<string>28309518177439BB00AA5E75</string>
+				<string>28309519177439BB00AA5E75</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Data</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>281C4C4517718F4600E941F7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Account.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>281C4C4617718F4600E941F7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Account.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>281C4C4717718F4600E941F7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>281C4C4617718F4600E941F7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>281C4C481771901200E941F7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AccountDAO.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>281C4C491771901200E941F7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>AccountDAO.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>281C4C4A1771901200E941F7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>281C4C491771901200E941F7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2829962517781FA800C64C5F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>path</key>
+			<string>LocalStorage.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2829962617781FA800C64C5F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2829962517781FA800C64C5F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2829962717781FEE00C64C5F</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>name</key>
+			<string>todo.txt</string>
+			<key>path</key>
+			<string>../todo.txt</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2829962817781FEE00C64C5F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2829962717781FEE00C64C5F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>282996291778214000C64C5F</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>AccountDAOTest.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2829962A1778214000C64C5F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>282996291778214000C64C5F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2829962B1778217700C64C5F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2829962517781FA800C64C5F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2829962C1778245300C64C5F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>compiled.mach-o.dylib</string>
+			<key>name</key>
+			<string>libsqlite3.dylib</string>
+			<key>path</key>
+			<string>usr/lib/libsqlite3.dylib</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>2829962D1778245300C64C5F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2829962C1778245300C64C5F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>283095151774379D00AA5E75</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AccountLog.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>283095161774379D00AA5E75</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>AccountLog.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>283095171774379D00AA5E75</key>
+		<dict>
+			<key>fileRef</key>
+			<string>283095161774379D00AA5E75</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>28309518177439BB00AA5E75</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AccountLogDAO.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>28309519177439BB00AA5E75</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>AccountLogDAO.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2830951A177439BC00AA5E75</key>
+		<dict>
+			<key>fileRef</key>
+			<string>28309519177439BB00AA5E75</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2830951B17744B2200AA5E75</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>282996291778214000C64C5F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Data</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8E2C4F030A6C471A94DE3646</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-BankAccountTests.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Pods-BankAccountTests.xcconfig</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>900F27E320624865A9067F78</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>1</string>
+		</dict>
+		<key>9676ED5C9EBA49BCB6D47C4E</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Pods-BankAccountTests-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>1</string>
+		</dict>
+		<key>ADFE19BAEA694F1F84028DBA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AE4CAABFE5114793BEDA2675</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict/>
+		</dict>
+		<key>AE4CAABFE5114793BEDA2675</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libPods-BankAccountTests.a</string>
+			<key>path</key>
+			<string>libPods-BankAccountTests.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>CDFD953971274CFCA3A419C3</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+		</dict>
+		<key>E2943EA5B2DE4941BE883AE4</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Pods-BankAccountTests-resources.sh"
+</string>
+		</dict>
+		<key>EAEB5ACE42EA455A9BA9B528</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>280771FF1761BD0B008F8E5C</string>
+</dict>
+</plist>
