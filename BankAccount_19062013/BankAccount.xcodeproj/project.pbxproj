@@ -25,6 +25,7 @@
 		281C4C4317718E3B00E941F7 /* BankAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 281C4C4217718E3B00E941F7 /* BankAccount.m */; };
 		281C4C4717718F4600E941F7 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 281C4C4617718F4600E941F7 /* Account.m */; };
 		281C4C4A1771901200E941F7 /* AccountDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 281C4C491771901200E941F7 /* AccountDAO.m */; };
+		2829962617781FA800C64C5F /* LocalStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2829962517781FA800C64C5F /* LocalStorage.framework */; };
 		283095171774379D00AA5E75 /* AccountLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 283095161774379D00AA5E75 /* AccountLog.m */; };
 		2830951A177439BC00AA5E75 /* AccountLogDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 28309519177439BB00AA5E75 /* AccountLogDAO.m */; };
 		F4358467ACAD4ECDB679B674 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07459FB3F3904503AFC272EC /* libPods.a */; };
@@ -67,6 +68,7 @@
 		281C4C4617718F4600E941F7 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
 		281C4C481771901200E941F7 /* AccountDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountDAO.h; sourceTree = "<group>"; };
 		281C4C491771901200E941F7 /* AccountDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountDAO.m; sourceTree = "<group>"; };
+		2829962517781FA800C64C5F /* LocalStorage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LocalStorage.framework; sourceTree = "<group>"; };
 		283095151774379D00AA5E75 /* AccountLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountLog.h; sourceTree = "<group>"; };
 		283095161774379D00AA5E75 /* AccountLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountLog.m; sourceTree = "<group>"; };
 		28309518177439BB00AA5E75 /* AccountLogDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountLogDAO.h; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				2807720D1761BD0B008F8E5C /* Foundation.framework in Frameworks */,
 				2807720F1761BD0B008F8E5C /* CoreGraphics.framework in Frameworks */,
 				F4358467ACAD4ECDB679B674 /* libPods.a in Frameworks */,
+				2829962617781FA800C64C5F /* LocalStorage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +128,7 @@
 		280772091761BD0B008F8E5C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2829962517781FA800C64C5F /* LocalStorage.framework */,
 				2807720A1761BD0B008F8E5C /* UIKit.framework */,
 				2807720C1761BD0B008F8E5C /* Foundation.framework */,
 				2807720E1761BD0B008F8E5C /* CoreGraphics.framework */,
@@ -496,6 +500,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1BA6F3786E194C4794BC9EB1 /* Pods.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BankAccount/BankAccount-Prefix.pch";
 				INFOPLIST_FILE = "BankAccount/BankAccount-Info.plist";
@@ -508,6 +516,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1BA6F3786E194C4794BC9EB1 /* Pods.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BankAccount/BankAccount-Prefix.pch";
 				INFOPLIST_FILE = "BankAccount/BankAccount-Info.plist";
