@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2829967C17782CB700C64C5F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2829967B17782CB700C64C5F /* UIKit.framework */; };
+		2829967E17782CB700C64C5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2829967D17782CB700C64C5F /* Foundation.framework */; };
+		2829968017782CB700C64C5F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2829967F17782CB700C64C5F /* CoreGraphics.framework */; };
+		2829968617782CB700C64C5F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2829968417782CB700C64C5F /* InfoPlist.strings */; };
+		2829968817782CB700C64C5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2829968717782CB700C64C5F /* main.m */; };
+		2829968C17782CB700C64C5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2829968B17782CB700C64C5F /* AppDelegate.m */; };
+		2829968E17782CB700C64C5F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2829968D17782CB700C64C5F /* Default.png */; };
+		2829969017782CB700C64C5F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2829968F17782CB700C64C5F /* Default@2x.png */; };
+		2829969217782CB700C64C5F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2829969117782CB700C64C5F /* Default-568h@2x.png */; };
+		2829969A17782CB800C64C5F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2829969917782CB800C64C5F /* SenTestingKit.framework */; };
+		2829969B17782CB800C64C5F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2829967B17782CB700C64C5F /* UIKit.framework */; };
+		2829969C17782CB800C64C5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2829967D17782CB700C64C5F /* Foundation.framework */; };
+		282996A417782CB800C64C5F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 282996A217782CB800C64C5F /* InfoPlist.strings */; };
+		282996B117782E3500C64C5F /* LocalStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282996B017782E3500C64C5F /* LocalStorage.framework */; };
+		282996B617782E3E00C64C5F /* BankAccountTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 282996B317782E3E00C64C5F /* BankAccountTest.m */; };
+		282996B717782E3E00C64C5F /* AccountDAOTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 282996B517782E3E00C64C5F /* AccountDAOTest.m */; };
+		282996C417782E4900C64C5F /* BankAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 282996BA17782E4900C64C5F /* BankAccount.m */; };
+		282996C517782E4900C64C5F /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 282996BD17782E4900C64C5F /* Account.m */; };
+		282996C617782E4900C64C5F /* AccountDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 282996BF17782E4900C64C5F /* AccountDAO.m */; };
+		282996C717782E4900C64C5F /* AccountLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 282996C117782E4900C64C5F /* AccountLog.m */; };
+		282996C817782E4900C64C5F /* AccountLogDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 282996C317782E4900C64C5F /* AccountLogDAO.m */; };
+		282996CA17782E6B00C64C5F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 282996C917782E6B00C64C5F /* libsqlite3.dylib */; };
+		282996CB17782EC500C64C5F /* LocalStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282996B017782E3500C64C5F /* LocalStorage.framework */; };
+		282996CC17782ED500C64C5F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 282996C917782E6B00C64C5F /* libsqlite3.dylib */; };
+		282996D2177832CF00C64C5F /* setLayout.sql in Resources */ = {isa = PBXBuildFile; fileRef = 282996D1177832CF00C64C5F /* setLayout.sql */; };
+		282996D31778362900C64C5F /* setLayout.sql in Resources */ = {isa = PBXBuildFile; fileRef = 282996D1177832CF00C64C5F /* setLayout.sql */; };
+		73BC81F374FB470686E1D1A1 /* libPods-BankAccountTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FF58C7FC31D486697DFAA11 /* libPods-BankAccountTests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2829969D17782CB800C64C5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2829967017782CB700C64C5F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2829967717782CB700C64C5F;
+			remoteInfo = BankAccount;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2829967817782CB700C64C5F /* BankAccount.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankAccount.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2829967B17782CB700C64C5F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2829967D17782CB700C64C5F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2829967F17782CB700C64C5F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2829968317782CB700C64C5F /* BankAccount-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BankAccount-Info.plist"; sourceTree = "<group>"; };
+		2829968517782CB700C64C5F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2829968717782CB700C64C5F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2829968917782CB700C64C5F /* BankAccount-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BankAccount-Prefix.pch"; sourceTree = "<group>"; };
+		2829968A17782CB700C64C5F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2829968B17782CB700C64C5F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2829968D17782CB700C64C5F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		2829968F17782CB700C64C5F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		2829969117782CB700C64C5F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		2829969817782CB800C64C5F /* BankAccountTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankAccountTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2829969917782CB800C64C5F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		282996A117782CB800C64C5F /* BankAccountTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BankAccountTests-Info.plist"; sourceTree = "<group>"; };
+		282996A317782CB800C64C5F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		282996B017782E3500C64C5F /* LocalStorage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LocalStorage.framework; sourceTree = "<group>"; };
+		282996B317782E3E00C64C5F /* BankAccountTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankAccountTest.m; sourceTree = "<group>"; };
+		282996B517782E3E00C64C5F /* AccountDAOTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountDAOTest.m; sourceTree = "<group>"; };
+		282996B917782E4900C64C5F /* BankAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankAccount.h; sourceTree = "<group>"; };
+		282996BA17782E4900C64C5F /* BankAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankAccount.m; sourceTree = "<group>"; };
+		282996BC17782E4900C64C5F /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
+		282996BD17782E4900C64C5F /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
+		282996BE17782E4900C64C5F /* AccountDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountDAO.h; sourceTree = "<group>"; };
+		282996BF17782E4900C64C5F /* AccountDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountDAO.m; sourceTree = "<group>"; };
+		282996C017782E4900C64C5F /* AccountLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountLog.h; sourceTree = "<group>"; };
+		282996C117782E4900C64C5F /* AccountLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountLog.m; sourceTree = "<group>"; };
+		282996C217782E4900C64C5F /* AccountLogDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountLogDAO.h; sourceTree = "<group>"; };
+		282996C317782E4900C64C5F /* AccountLogDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountLogDAO.m; sourceTree = "<group>"; };
+		282996C917782E6B00C64C5F /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		282996D1177832CF00C64C5F /* setLayout.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = setLayout.sql; sourceTree = "<group>"; };
+		7FF58C7FC31D486697DFAA11 /* libPods-BankAccountTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BankAccountTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8E57CADD6564ACF8EE66147 /* Pods-BankAccountTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankAccountTests.xcconfig"; path = "Pods/Pods-BankAccountTests.xcconfig"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2829967517782CB700C64C5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				282996CA17782E6B00C64C5F /* libsqlite3.dylib in Frameworks */,
+				2829967C17782CB700C64C5F /* UIKit.framework in Frameworks */,
+				2829967E17782CB700C64C5F /* Foundation.framework in Frameworks */,
+				2829968017782CB700C64C5F /* CoreGraphics.framework in Frameworks */,
+				282996B117782E3500C64C5F /* LocalStorage.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2829969417782CB800C64C5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2829969A17782CB800C64C5F /* SenTestingKit.framework in Frameworks */,
+				2829969B17782CB800C64C5F /* UIKit.framework in Frameworks */,
+				2829969C17782CB800C64C5F /* Foundation.framework in Frameworks */,
+				73BC81F374FB470686E1D1A1 /* libPods-BankAccountTests.a in Frameworks */,
+				282996CB17782EC500C64C5F /* LocalStorage.framework in Frameworks */,
+				282996CC17782ED500C64C5F /* libsqlite3.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2829966F17782CB700C64C5F = {
+			isa = PBXGroup;
+			children = (
+				282996C917782E6B00C64C5F /* libsqlite3.dylib */,
+				2829968117782CB700C64C5F /* BankAccount */,
+				2829969F17782CB800C64C5F /* BankAccountTests */,
+				2829967A17782CB700C64C5F /* Frameworks */,
+				2829967917782CB700C64C5F /* Products */,
+				B8E57CADD6564ACF8EE66147 /* Pods-BankAccountTests.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		2829967917782CB700C64C5F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2829967817782CB700C64C5F /* BankAccount.app */,
+				2829969817782CB800C64C5F /* BankAccountTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2829967A17782CB700C64C5F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				282996B017782E3500C64C5F /* LocalStorage.framework */,
+				2829967B17782CB700C64C5F /* UIKit.framework */,
+				2829967D17782CB700C64C5F /* Foundation.framework */,
+				2829967F17782CB700C64C5F /* CoreGraphics.framework */,
+				2829969917782CB800C64C5F /* SenTestingKit.framework */,
+				7FF58C7FC31D486697DFAA11 /* libPods-BankAccountTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2829968117782CB700C64C5F /* BankAccount */ = {
+			isa = PBXGroup;
+			children = (
+				282996B817782E4900C64C5F /* Business */,
+				282996BB17782E4900C64C5F /* Data */,
+				2829968A17782CB700C64C5F /* AppDelegate.h */,
+				2829968B17782CB700C64C5F /* AppDelegate.m */,
+				2829968217782CB700C64C5F /* Supporting Files */,
+			);
+			path = BankAccount;
+			sourceTree = "<group>";
+		};
+		2829968217782CB700C64C5F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2829968317782CB700C64C5F /* BankAccount-Info.plist */,
+				2829968417782CB700C64C5F /* InfoPlist.strings */,
+				2829968717782CB700C64C5F /* main.m */,
+				2829968917782CB700C64C5F /* BankAccount-Prefix.pch */,
+				2829968D17782CB700C64C5F /* Default.png */,
+				2829968F17782CB700C64C5F /* Default@2x.png */,
+				2829969117782CB700C64C5F /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2829969F17782CB800C64C5F /* BankAccountTests */ = {
+			isa = PBXGroup;
+			children = (
+				282996B217782E3E00C64C5F /* Business */,
+				282996B417782E3E00C64C5F /* Data */,
+				282996A017782CB800C64C5F /* Supporting Files */,
+			);
+			path = BankAccountTests;
+			sourceTree = "<group>";
+		};
+		282996A017782CB800C64C5F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				282996D1177832CF00C64C5F /* setLayout.sql */,
+				282996A117782CB800C64C5F /* BankAccountTests-Info.plist */,
+				282996A217782CB800C64C5F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		282996B217782E3E00C64C5F /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				282996B317782E3E00C64C5F /* BankAccountTest.m */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		282996B417782E3E00C64C5F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				282996B517782E3E00C64C5F /* AccountDAOTest.m */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		282996B817782E4900C64C5F /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				282996B917782E4900C64C5F /* BankAccount.h */,
+				282996BA17782E4900C64C5F /* BankAccount.m */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		282996BB17782E4900C64C5F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				282996BC17782E4900C64C5F /* Account.h */,
+				282996BD17782E4900C64C5F /* Account.m */,
+				282996BE17782E4900C64C5F /* AccountDAO.h */,
+				282996BF17782E4900C64C5F /* AccountDAO.m */,
+				282996C017782E4900C64C5F /* AccountLog.h */,
+				282996C117782E4900C64C5F /* AccountLog.m */,
+				282996C217782E4900C64C5F /* AccountLogDAO.h */,
+				282996C317782E4900C64C5F /* AccountLogDAO.m */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2829967717782CB700C64C5F /* BankAccount */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 282996AA17782CB800C64C5F /* Build configuration list for PBXNativeTarget "BankAccount" */;
+			buildPhases = (
+				2829967417782CB700C64C5F /* Sources */,
+				2829967517782CB700C64C5F /* Frameworks */,
+				2829967617782CB700C64C5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BankAccount;
+			productName = BankAccount;
+			productReference = 2829967817782CB700C64C5F /* BankAccount.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2829969717782CB800C64C5F /* BankAccountTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 282996AD17782CB800C64C5F /* Build configuration list for PBXNativeTarget "BankAccountTests" */;
+			buildPhases = (
+				3886A127027B41D3B1CD82C4 /* Check Pods Manifest.lock */,
+				2829969317782CB800C64C5F /* Sources */,
+				2829969417782CB800C64C5F /* Frameworks */,
+				2829969517782CB800C64C5F /* Resources */,
+				2829969617782CB800C64C5F /* ShellScript */,
+				8EDE62EED3F849519DC17C65 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2829969E17782CB800C64C5F /* PBXTargetDependency */,
+			);
+			name = BankAccountTests;
+			productName = BankAccountTests;
+			productReference = 2829969817782CB800C64C5F /* BankAccountTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2829967017782CB700C64C5F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "El Nino";
+			};
+			buildConfigurationList = 2829967317782CB700C64C5F /* Build configuration list for PBXProject "BankAccount" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2829966F17782CB700C64C5F;
+			productRefGroup = 2829967917782CB700C64C5F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2829967717782CB700C64C5F /* BankAccount */,
+				2829969717782CB800C64C5F /* BankAccountTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2829967617782CB700C64C5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2829968617782CB700C64C5F /* InfoPlist.strings in Resources */,
+				2829968E17782CB700C64C5F /* Default.png in Resources */,
+				2829969017782CB700C64C5F /* Default@2x.png in Resources */,
+				2829969217782CB700C64C5F /* Default-568h@2x.png in Resources */,
+				282996D31778362900C64C5F /* setLayout.sql in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2829969517782CB800C64C5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				282996A417782CB800C64C5F /* InfoPlist.strings in Resources */,
+				282996D2177832CF00C64C5F /* setLayout.sql in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2829969617782CB800C64C5F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		3886A127027B41D3B1CD82C4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+		8EDE62EED3F849519DC17C65 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-BankAccountTests-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2829967417782CB700C64C5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2829968817782CB700C64C5F /* main.m in Sources */,
+				2829968C17782CB700C64C5F /* AppDelegate.m in Sources */,
+				282996C417782E4900C64C5F /* BankAccount.m in Sources */,
+				282996C517782E4900C64C5F /* Account.m in Sources */,
+				282996C617782E4900C64C5F /* AccountDAO.m in Sources */,
+				282996C717782E4900C64C5F /* AccountLog.m in Sources */,
+				282996C817782E4900C64C5F /* AccountLogDAO.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2829969317782CB800C64C5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				282996B617782E3E00C64C5F /* BankAccountTest.m in Sources */,
+				282996B717782E3E00C64C5F /* AccountDAOTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2829969E17782CB800C64C5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2829967717782CB700C64C5F /* BankAccount */;
+			targetProxy = 2829969D17782CB800C64C5F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2829968417782CB700C64C5F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2829968517782CB700C64C5F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		282996A217782CB800C64C5F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				282996A317782CB800C64C5F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		282996A817782CB800C64C5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		282996A917782CB800C64C5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		282996AB17782CB800C64C5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BankAccount/BankAccount-Prefix.pch";
+				INFOPLIST_FILE = "BankAccount/BankAccount-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		282996AC17782CB800C64C5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BankAccount/BankAccount-Prefix.pch";
+				INFOPLIST_FILE = "BankAccount/BankAccount-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		282996AE17782CB800C64C5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8E57CADD6564ACF8EE66147 /* Pods-BankAccountTests.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BankAccount.app/BankAccount";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BankAccount/BankAccount-Prefix.pch";
+				INFOPLIST_FILE = "BankAccountTests/BankAccountTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		282996AF17782CB800C64C5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8E57CADD6564ACF8EE66147 /* Pods-BankAccountTests.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BankAccount.app/BankAccount";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BankAccount/BankAccount-Prefix.pch";
+				INFOPLIST_FILE = "BankAccountTests/BankAccountTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2829967317782CB700C64C5F /* Build configuration list for PBXProject "BankAccount" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				282996A817782CB800C64C5F /* Debug */,
+				282996A917782CB800C64C5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		282996AA17782CB800C64C5F /* Build configuration list for PBXNativeTarget "BankAccount" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				282996AB17782CB800C64C5F /* Debug */,
+				282996AC17782CB800C64C5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		282996AD17782CB800C64C5F /* Build configuration list for PBXNativeTarget "BankAccountTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				282996AE17782CB800C64C5F /* Debug */,
+				282996AF17782CB800C64C5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2829967017782CB700C64C5F /* Project object */;
+}

@@ -1,4 +1,4 @@
 platform :ios ,'5.1'
   target :BankAccountTests, :exclusive => true do
-      pod 'Kiwi',  '~> 2.1'
+      pod 'Kiwi',  '~> 2.0'
   end

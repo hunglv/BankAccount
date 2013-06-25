@@ -1,0 +1,1 @@
+CREATE TABLE Account (accountNumber text,balance double,timeStamp text);
