@@ -44,7 +44,7 @@ describe(@"BankAccount test", ^{
            
            [[accountOpened.accountNumber should] equal:accountNumber];
            [[accountOpened.balance should] equal:@0];
-           [[accountOpened.timeStamp should] equal:mockDate];
+           [accountOpened.timeStamp shouldBeNil];
            
        });
     });
