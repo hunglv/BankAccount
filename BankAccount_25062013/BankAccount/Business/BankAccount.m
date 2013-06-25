@@ -15,6 +15,8 @@
 -(Account *)open:(NSString *)accNum {
     Account *accountWillInsert = [[Account alloc] init];
     accountWillInsert.timeOpened = [NSDate date];
+    accountWillInsert.accountNumber = accNum;
+    accountWillInsert.balance = @0;
     BOOL insertSuccess = [accountDAO insertAccount:accountWillInsert];
     if (!insertSuccess) {
         accountWillInsert = nil;
