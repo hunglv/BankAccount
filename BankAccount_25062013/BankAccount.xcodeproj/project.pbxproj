@@ -24,6 +24,8 @@
 		28782162177971EE00FF73B7 /* BankAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 28782161177971EE00FF73B7 /* BankAccount.m */; };
 		287821651779726300FF73B7 /* AccountDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 287821641779726300FF73B7 /* AccountDAO.m */; };
 		28782168177973DB00FF73B7 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 28782167177973DB00FF73B7 /* Account.m */; };
+		287AA096177AC7320075AD5A /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 287AA095177AC7320075AD5A /* Transaction.m */; };
+		287AA099177AC7E30075AD5A /* TransactionDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 287AA098177AC7E30075AD5A /* TransactionDAO.m */; };
 		73BC81F374FB470686E1D1A1 /* libPods-BankAccountTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FF58C7FC31D486697DFAA11 /* libPods-BankAccountTests.a */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,10 @@
 		287821641779726300FF73B7 /* AccountDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountDAO.m; sourceTree = "<group>"; };
 		28782166177973DB00FF73B7 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
 		28782167177973DB00FF73B7 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
+		287AA094177AC7320075AD5A /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
+		287AA095177AC7320075AD5A /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
+		287AA097177AC7E30075AD5A /* TransactionDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionDAO.h; sourceTree = "<group>"; };
+		287AA098177AC7E30075AD5A /* TransactionDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionDAO.m; sourceTree = "<group>"; };
 		7FF58C7FC31D486697DFAA11 /* libPods-BankAccountTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BankAccountTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8E57CADD6564ACF8EE66147 /* Pods-BankAccountTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankAccountTests.xcconfig"; path = "Pods/Pods-BankAccountTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -198,6 +204,8 @@
 			children = (
 				287821631779726300FF73B7 /* AccountDAO.h */,
 				287821641779726300FF73B7 /* AccountDAO.m */,
+				287AA097177AC7E30075AD5A /* TransactionDAO.h */,
+				287AA098177AC7E30075AD5A /* TransactionDAO.m */,
 			);
 			path = DAO;
 			sourceTree = "<group>";
@@ -207,6 +215,8 @@
 			children = (
 				28782166177973DB00FF73B7 /* Account.h */,
 				28782167177973DB00FF73B7 /* Account.m */,
+				287AA094177AC7320075AD5A /* Transaction.h */,
+				287AA095177AC7320075AD5A /* Transaction.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -355,6 +365,8 @@
 				28782162177971EE00FF73B7 /* BankAccount.m in Sources */,
 				287821651779726300FF73B7 /* AccountDAO.m in Sources */,
 				28782168177973DB00FF73B7 /* Account.m in Sources */,
+				287AA096177AC7320075AD5A /* Transaction.m in Sources */,
+				287AA099177AC7E30075AD5A /* TransactionDAO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

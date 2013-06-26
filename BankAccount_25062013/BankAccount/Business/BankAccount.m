@@ -11,6 +11,7 @@
 @implementation BankAccount
 
 @synthesize accountDAO;
+@synthesize transactionDAO;
 
 -(Account *)open:(NSString *)accNum {
     Account *accountWillInsert = [[Account alloc] init];
@@ -22,6 +23,26 @@
         accountWillInsert = nil;
     }
     return accountWillInsert;
+}
+
+-(Account *)getAccount:(NSString *)accNum {
+    Account *accountGet = [accountDAO getAccountWithAccountNumber:accNum];
+    return accountGet;
+}
+
+-(void)depositAccountNumber:(NSString *)accNum amount:(NSNumber *)amount description:(NSString *)description {
+    Account *accountBefore = [self getAccount:accNum];
+    if (accountBefore) {
+        accountBefore.balance = @(accountBefore.balance.doubleValue + amount.doubleValue);
+        if ([accountDAO updateAccount:accountBefore]) {
+            Transaction *newTrans = [[Transaction alloc] init];
+            newTrans.accountNumber = accNum;
+            newTrans.amount = amount;
+            newTrans.description = description;
+            newTrans.timeStamp = [NSDate date];
+            [transactionDAO insertTransaction:newTrans];
+        }
+    }
 }
 
 @end

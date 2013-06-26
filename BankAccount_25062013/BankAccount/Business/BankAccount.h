@@ -12,10 +12,20 @@
 
 #import "Account.h"
 
+#import "Transaction.h"
+
+#import "TransactionDAO.h"
+
 @interface BankAccount : NSObject
 
 @property (nonatomic, strong) AccountDAO *accountDAO;
 
 - (Account *)open:(NSString *)accNum;
+
+- (Account *)getAccount:(NSString *)accNum;
+
+- (void)depositAccountNumber:(NSString *)accNum amount:(NSNumber *)amount description:(NSString *)description;
+
+@property (nonatomic, strong) TransactionDAO *transactionDAO;
 
 @end

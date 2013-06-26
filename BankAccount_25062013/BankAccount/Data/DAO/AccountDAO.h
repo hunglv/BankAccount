@@ -13,4 +13,8 @@
 
 - (BOOL)insertAccount:(Account *)accIns;
 
+- (Account *)getAccountWithAccountNumber:(NSString *)accountNumber;
+
+- (BOOL)updateAccount:(Account *)acc;
+
 @end
