@@ -13,4 +13,10 @@
 
 - (BOOL)insertTransaction:(Transaction *)trans;
 
+- (NSArray *)transactionOccuredWithAccountNumber:(NSString *)accNum;
+
+- (NSArray *)transactionOccuredWithAccountNumber:(NSString *)accNum startTime:(NSDate *)start endTime:(NSDate *)end;
+
+- (NSArray *)transactionOccuredWithAccountNumber:(NSString *)accNum numberTransactions:(NSNumber *)number;
+
 @end

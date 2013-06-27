@@ -108,6 +108,72 @@ describe(@"BankAccount test", ^{
             [[tranShouldInsert.accountNumber should] equal:accountNumber];
         });
     });
+    
+    context(@"Withdraw account", ^{
+        it(@"withdraw account with given accountNumber, amount, desctiption. account balance will decrease amount", ^{
+            Account *accountBeforWithdraw = [[Account alloc] init];
+            accountBeforWithdraw.balance = @100;
+            
+            NSNumber *balanceBeforDeposit = accountBeforWithdraw.balance;
+            
+            NSNumber *amount = @(50.25);
+            
+            [sut stub:@selector(getAccount:) andReturn:accountBeforWithdraw];
+            [[sut should] receive:@selector(getAccount:) andReturn:accountBeforWithdraw withArguments:accountNumber];
+            
+            KWCaptureSpy *spy = [mockAccountDAO captureArgument:@selector(updateAccount:) atIndex:0];
+            
+            [sut withdrawAccountNumber:accountNumber amount:amount description:[NSString nullMock]];
+            
+            Account *accountUpdate = spy.argument;
+            [[theValue(accountUpdate.balance.doubleValue + amount.doubleValue) should] equal:theValue(balanceBeforDeposit.doubleValue)];
+        });
+        
+        it(@"withdraw should save a transaction", ^{
+            Account *accountDeposit = [Account nullMock];
+            NSDate *mockCurrentDate = [NSDate nullMock];
+            [NSDate stub:@selector(date) andReturn:mockCurrentDate];
+            NSString *mockDescription = [NSString nullMock];
+            NSNumber *mockAmount = @50;
+            
+            [sut stub:@selector(getAccount:) andReturn:accountDeposit];
+            
+            [mockAccountDAO stub:@selector(updateAccount:) andReturn:theValue(YES)];
+            
+            KWCaptureSpy *spy = [mockTransactionDAO captureArgument:@selector(insertTransaction:) atIndex:0];
+            
+            [sut withdrawAccountNumber:accountNumber amount:mockAmount description:mockDescription];
+            
+            Transaction *tranShouldInsert = spy.argument;
+            
+            [[theValue(tranShouldInsert.amount.doubleValue) should] equal:theValue(mockAmount.doubleValue * (-1))];
+            [[tranShouldInsert.timeStamp should] equal:mockCurrentDate];
+            [[tranShouldInsert.description should] equal:mockDescription];
+            [[tranShouldInsert.accountNumber should] equal:accountNumber];
+        });
+    });
+    
+    context(@"Get transaction", ^{
+        it(@"get transaction occured on account with given accountNumber ", ^{
+            KWCaptureSpy *spy = [mockTransactionDAO captureArgument:@selector(transactionOccuredWithAccountNumber:) atIndex:0];
+            [sut transactionOccuredWithAccountNumber:accountNumber];
+            NSString *accountCapture = spy.argument;
+            [[accountCapture should] equal:accountNumber];
+        });
+        
+        it(@"get transaction occured on account with given accountNumber, start time, end time", ^{
+            NSDate *mockStartTime = [NSDate mock];
+            NSDate *mockEndTime = [NSDate mock];
+            [[mockTransactionDAO should] receive:@selector(transactionOccuredWithAccountNumber:startTime:endTime:) andReturn:any() withArguments:accountNumber, mockStartTime, mockEndTime];
+            [sut transactionOccuredWithAccountNumber:accountNumber startTime:mockStartTime endTime:mockEndTime];
+        });
+        
+        it(@"get transaction occured on account with given accountNumber, number transactions", ^{
+            NSNumber *mockNumber = [NSNumber mock];
+            [[mockTransactionDAO should] receive:@selector(transactionOccuredWithAccountNumber:numberTransactions:) andReturn:any() withArguments:accountNumber, mockNumber];
+            [sut transactionOccuredWithAccountNumber:accountNumber numberTransactions:mockNumber];
+        });
+    });
         
 });
 SPEC_END

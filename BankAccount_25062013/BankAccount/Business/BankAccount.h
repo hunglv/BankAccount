@@ -28,4 +28,11 @@
 
 @property (nonatomic, strong) TransactionDAO *transactionDAO;
 
+- (void)withdrawAccountNumber:(NSString *)accNum amount:(NSNumber *)amount description:(NSString *)description;
+
+- (NSArray *)transactionOccuredWithAccountNumber:(NSString *)accNum;
+
+- (NSArray *)transactionOccuredWithAccountNumber:(NSString *)accNum startTime:(NSDate *)start endTime:(NSDate *)end;
+
+- (NSArray *)transactionOccuredWithAccountNumber:(NSString *)accNum numberTransactions:(NSNumber *)number;
 @end

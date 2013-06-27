@@ -45,4 +45,37 @@
     }
 }
 
+- (void)withdrawAccountNumber:(NSString *)accNum amount:(NSNumber *)amount description:(NSString *)description {
+    Account *accountBefore = [self getAccount:accNum];
+    if (accountBefore) {
+        accountBefore.balance = @(accountBefore.balance.doubleValue - amount.doubleValue);
+        if ([accountDAO updateAccount:accountBefore]) {
+            Transaction *newTrans = [[Transaction alloc] init];
+            newTrans.accountNumber = accNum;
+            newTrans.amount = @((-1) * amount.doubleValue);
+            newTrans.description = description;
+            newTrans.timeStamp = [NSDate date];
+            [transactionDAO insertTransaction:newTrans];
+        }
+    }
+}
+
+-(NSArray *)transactionOccuredWithAccountNumber:(NSString *)accNum {
+    NSArray *result = nil;
+    result = [transactionDAO transactionOccuredWithAccountNumber:accNum];
+    return result;
+}
+
+-(NSArray *)transactionOccuredWithAccountNumber:(NSString *)accNum startTime:(NSDate *)start endTime:(NSDate *)end {
+    NSArray *result = nil;
+    result = [transactionDAO transactionOccuredWithAccountNumber:accNum startTime:start endTime:end];
+    return result;
+}
+
+-(NSArray *)transactionOccuredWithAccountNumber:(NSString *)accNum numberTransactions:(NSNumber *)number {
+    NSArray *result = nil;
+    result = [transactionDAO transactionOccuredWithAccountNumber:accNum numberTransactions:number];
+    return result;
+}
+
 @end
