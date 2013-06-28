@@ -136,8 +136,8 @@ describe(@"BankAccount test", ^{
             NSString *mockDescription = [NSString nullMock];
             NSNumber *mockAmount = @50;
             
-            [sut stub:@selector(getAccount:) andReturn:accountDeposit];
-            
+//            [sut stub:@selector(getAccount:) andReturn:accountDeposit];
+            [[sut should] receive:@selector(getAccount:) andReturn:accountDeposit];
             [mockAccountDAO stub:@selector(updateAccount:) andReturn:theValue(YES)];
             
             KWCaptureSpy *spy = [mockTransactionDAO captureArgument:@selector(insertTransaction:) atIndex:0];

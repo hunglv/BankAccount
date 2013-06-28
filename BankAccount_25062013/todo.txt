@@ -1,0 +1,13 @@
+I, Test Account DAO
+1. Test insert Account
+- insert into empty database.
+- insert into database which this account is exsists.
+2. Test get Account with given account number
+- get account, there's no account in database.
+- get account, there's no account with given account number in database
+- get account, there's account with given account number in database
+3. Test update account
+- update account that is exists in database.
+
+II, Test Transaction DAO
+The same test account dao.

@@ -20,6 +20,8 @@
 		2829969B17782CB800C64C5F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2829967B17782CB700C64C5F /* UIKit.framework */; };
 		2829969C17782CB800C64C5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2829967D17782CB700C64C5F /* Foundation.framework */; };
 		282996A417782CB800C64C5F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 282996A217782CB800C64C5F /* InfoPlist.strings */; };
+		2847BCD8177D6ADB00067186 /* LocalStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2847BCD7177D6ADB00067186 /* LocalStorage.framework */; };
+		2847BCDA177D6AFE00067186 /* todo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2847BCD9177D6AFE00067186 /* todo.txt */; };
 		2878215B177971A100FF73B7 /* BankAccountTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2878215A177971A100FF73B7 /* BankAccountTest.m */; };
 		28782162177971EE00FF73B7 /* BankAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 28782161177971EE00FF73B7 /* BankAccount.m */; };
 		287821651779726300FF73B7 /* AccountDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 287821641779726300FF73B7 /* AccountDAO.m */; };
@@ -57,6 +59,8 @@
 		2829969917782CB800C64C5F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		282996A117782CB800C64C5F /* BankAccountTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BankAccountTests-Info.plist"; sourceTree = "<group>"; };
 		282996A317782CB800C64C5F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2847BCD7177D6ADB00067186 /* LocalStorage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LocalStorage.framework; sourceTree = "<group>"; };
+		2847BCD9177D6AFE00067186 /* todo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo.txt; sourceTree = "<group>"; };
 		2878215A177971A100FF73B7 /* BankAccountTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankAccountTest.m; sourceTree = "<group>"; };
 		28782160177971EE00FF73B7 /* BankAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankAccount.h; sourceTree = "<group>"; };
 		28782161177971EE00FF73B7 /* BankAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankAccount.m; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 				2829967C17782CB700C64C5F /* UIKit.framework in Frameworks */,
 				2829967E17782CB700C64C5F /* Foundation.framework in Frameworks */,
 				2829968017782CB700C64C5F /* CoreGraphics.framework in Frameworks */,
+				2847BCD8177D6ADB00067186 /* LocalStorage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +105,7 @@
 		2829966F17782CB700C64C5F = {
 			isa = PBXGroup;
 			children = (
+				2847BCD9177D6AFE00067186 /* todo.txt */,
 				2829968117782CB700C64C5F /* BankAccount */,
 				2829969F17782CB800C64C5F /* BankAccountTests */,
 				2829967A17782CB700C64C5F /* Frameworks */,
@@ -120,6 +126,7 @@
 		2829967A17782CB700C64C5F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2847BCD7177D6ADB00067186 /* LocalStorage.framework */,
 				2829967B17782CB700C64C5F /* UIKit.framework */,
 				2829967D17782CB700C64C5F /* Foundation.framework */,
 				2829967F17782CB700C64C5F /* CoreGraphics.framework */,
@@ -298,6 +305,7 @@
 				2829968E17782CB700C64C5F /* Default.png in Resources */,
 				2829969017782CB700C64C5F /* Default@2x.png in Resources */,
 				2829969217782CB700C64C5F /* Default-568h@2x.png in Resources */,
+				2847BCDA177D6AFE00067186 /* todo.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +475,10 @@
 		282996AB17782CB800C64C5F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BankAccount/BankAccount-Prefix.pch";
 				INFOPLIST_FILE = "BankAccount/BankAccount-Info.plist";
@@ -478,6 +490,10 @@
 		282996AC17782CB800C64C5F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BankAccount/BankAccount-Prefix.pch";
 				INFOPLIST_FILE = "BankAccount/BankAccount-Info.plist";
