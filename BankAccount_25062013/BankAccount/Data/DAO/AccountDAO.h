@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Account.h"
+#import <LocalStorage/LocalStorage.h>
 
 @interface AccountDAO : NSObject
 
@@ -16,5 +17,7 @@
 - (Account *)getAccountWithAccountNumber:(NSString *)accountNumber;
 
 - (BOOL)updateAccount:(Account *)acc;
+
+@property (nonatomic, strong) FMDatabaseQueue *dataAccessHelper;
 
 @end

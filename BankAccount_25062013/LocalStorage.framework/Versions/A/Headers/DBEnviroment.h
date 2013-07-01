@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FMDatabaseQueue+InMemory.h"
 
 @interface DBEnviroment : NSObject
 
 @property (nonatomic, strong) NSString *databasePath;
+@property (nonatomic, strong) FMDatabaseQueue *databaseQueue;
 
 - (BOOL)loadScriptFile:(NSString *)filePath;
 - (BOOL)loadScriptFile:(NSString *)filePath delimiter:(NSString *)delimiter;
