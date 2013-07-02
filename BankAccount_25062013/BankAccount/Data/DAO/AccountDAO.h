@@ -20,4 +20,6 @@
 
 @property (nonatomic, strong) FMDatabaseQueue *dataAccessHelper;
 
+@property (nonatomic, strong) NSError *error;
+
 @end

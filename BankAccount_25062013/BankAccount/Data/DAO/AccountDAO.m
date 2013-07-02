@@ -11,6 +11,7 @@
 @implementation AccountDAO
 
 @synthesize dataAccessHelper;
+@synthesize error;
 
 -(BOOL)insertAccount:(Account *)accIns {
     __block BOOL val;
@@ -26,11 +27,30 @@
 }
 
 -(Account *)getAccountWithAccountNumber:(NSString *)accountNumber {
-    return nil;
+    __block Account *accountWillGet;
+    [dataAccessHelper inTransaction:^(FMDatabase *db, BOOL *rollback) {
+        NSString *stm = [NSString stringWithFormat:@"select * from account where accountnumber = '%@'", accountNumber];
+        FMResultSet *r = [db executeQuery:stm];
+        if ([r next]) {
+            accountWillGet = [[Account alloc] init];
+            accountWillGet.accountNumber = [r objectForColumnName:@"accountnumber"];
+            accountWillGet.balance = [r objectForColumnName:@"balance"];
+            accountWillGet.timeOpened = [r objectForColumnName:@"timeopened"];
+            error = nil;
+        } else {
+            error = [NSError errorWithDomain:@"GetAccountError" code:0 userInfo:nil];
+        }
+    }];
+    return accountWillGet;
 }
 
 -(BOOL)updateAccount:(Account *)acc {
-    return NO;
+    __block BOOL val;
+    [dataAccessHelper inTransaction:^(FMDatabase *db, BOOL *rollback) {        
+        NSString *stm = [NSString stringWithFormat:@"update account set balance = %@ where accountnumber = '%@'", acc.balance, acc.accountNumber];
+        val = [db executeUpdate:stm];
+    }];
+    return val;
 }
 
 @end

@@ -22,6 +22,8 @@
 		282996A417782CB800C64C5F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 282996A217782CB800C64C5F /* InfoPlist.strings */; };
 		2847BCD8177D6ADB00067186 /* LocalStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2847BCD7177D6ADB00067186 /* LocalStorage.framework */; };
 		2847BCDA177D6AFE00067186 /* todo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2847BCD9177D6AFE00067186 /* todo.txt */; };
+		287733EB1782B17800991FC1 /* tc3.sql in Resources */ = {isa = PBXBuildFile; fileRef = 287733EA1782B17800991FC1 /* tc3.sql */; };
+		287733EC1782B17800991FC1 /* tc3.sql in Resources */ = {isa = PBXBuildFile; fileRef = 287733EA1782B17800991FC1 /* tc3.sql */; };
 		2878215B177971A100FF73B7 /* BankAccountTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2878215A177971A100FF73B7 /* BankAccountTest.m */; };
 		28782162177971EE00FF73B7 /* BankAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 28782161177971EE00FF73B7 /* BankAccount.m */; };
 		287821651779726300FF73B7 /* AccountDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 287821641779726300FF73B7 /* AccountDAO.m */; };
@@ -69,6 +71,7 @@
 		282996A317782CB800C64C5F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2847BCD7177D6ADB00067186 /* LocalStorage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LocalStorage.framework; sourceTree = "<group>"; };
 		2847BCD9177D6AFE00067186 /* todo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo.txt; sourceTree = "<group>"; };
+		287733EA1782B17800991FC1 /* tc3.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tc3.sql; sourceTree = "<group>"; };
 		2878215A177971A100FF73B7 /* BankAccountTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankAccountTest.m; sourceTree = "<group>"; };
 		28782160177971EE00FF73B7 /* BankAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankAccount.h; sourceTree = "<group>"; };
 		28782161177971EE00FF73B7 /* BankAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankAccount.m; sourceTree = "<group>"; };
@@ -193,6 +196,7 @@
 			children = (
 				28A2F4C117815FAD00F2A40C /* tc1.sql */,
 				28A2F4BE17815F9800F2A40C /* tc2.sql */,
+				287733EA1782B17800991FC1 /* tc3.sql */,
 				282996A117782CB800C64C5F /* BankAccountTests-Info.plist */,
 				282996A217782CB800C64C5F /* InfoPlist.strings */,
 			);
@@ -343,6 +347,7 @@
 				2847BCDA177D6AFE00067186 /* todo.txt in Resources */,
 				28A2F4BF17815F9800F2A40C /* tc2.sql in Resources */,
 				28A2F4C217815FAD00F2A40C /* tc1.sql in Resources */,
+				287733EB1782B17800991FC1 /* tc3.sql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +358,7 @@
 				282996A417782CB800C64C5F /* InfoPlist.strings in Resources */,
 				28A2F4C017815F9800F2A40C /* tc2.sql in Resources */,
 				28A2F4C317815FAD00F2A40C /* tc1.sql in Resources */,
+				287733EC1782B17800991FC1 /* tc3.sql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
