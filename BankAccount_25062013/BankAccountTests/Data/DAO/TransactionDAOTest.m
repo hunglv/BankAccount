@@ -25,7 +25,7 @@ describe(@"TransactionDAO test", ^{
         sut = nil;
         accNumber = nil;
     });
-    context(@"insert new account", ^{
+    context(@"insert new trans", ^{
         it(@"insert into empty database should success", ^{
             Transaction *tranWillInsert = [[Transaction alloc] init];
             tranWillInsert.accountNumber = accNumber;
