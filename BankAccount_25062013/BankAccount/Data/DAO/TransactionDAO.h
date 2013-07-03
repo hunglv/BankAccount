@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Transaction.h"
+#import <LocalStorage/LocalStorage.h>
 
 @interface TransactionDAO : NSObject
 
@@ -18,5 +19,7 @@
 - (NSArray *)transactionOccuredWithAccountNumber:(NSString *)accNum startTime:(NSDate *)start endTime:(NSDate *)end;
 
 - (NSArray *)transactionOccuredWithAccountNumber:(NSString *)accNum numberTransactions:(NSNumber *)number;
+
+@property (nonatomic, strong) FMDatabaseQueue *dataAccessHelper;
 
 @end

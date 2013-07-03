@@ -10,8 +10,19 @@
 
 @implementation TransactionDAO
 
+@synthesize dataAccessHelper;
+
 -(BOOL)insertTransaction:(Transaction *)trans {
-    return NO;
+    __block BOOL val;
+    [dataAccessHelper inTransaction:^(FMDatabase *db, BOOL *rollback) {
+        NSDateFormatter *dateformat = [[NSDateFormatter alloc] init];
+        [dateformat setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
+        NSString *dateOpended = [dateformat stringFromDate:trans.timeStamp];
+        
+        NSString *stm = [NSString stringWithFormat:@"insert into tran(accountnumber,amount,timestamp) values('%@', %@, '%@')", trans.accountNumber, trans.amount, dateOpended];
+        val = [db executeUpdate:stm];
+    }];
+    return val;
 }
 
 -(NSArray *)transactionOccuredWithAccountNumber:(NSString *)accNum {

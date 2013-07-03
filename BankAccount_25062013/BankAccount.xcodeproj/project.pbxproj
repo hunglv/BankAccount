@@ -30,6 +30,9 @@
 		28782168177973DB00FF73B7 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 28782167177973DB00FF73B7 /* Account.m */; };
 		287AA096177AC7320075AD5A /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 287AA095177AC7320075AD5A /* Transaction.m */; };
 		287AA099177AC7E30075AD5A /* TransactionDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 287AA098177AC7E30075AD5A /* TransactionDAO.m */; };
+		288F19921783FD600058EFE0 /* TransactionDAOTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 288F19911783FD600058EFE0 /* TransactionDAOTest.m */; };
+		288F1994178401630058EFE0 /* tran_sc1.sql in Resources */ = {isa = PBXBuildFile; fileRef = 288F1993178401630058EFE0 /* tran_sc1.sql */; };
+		288F1995178401630058EFE0 /* tran_sc1.sql in Resources */ = {isa = PBXBuildFile; fileRef = 288F1993178401630058EFE0 /* tran_sc1.sql */; };
 		28A2F4B617815B2D00F2A40C /* AccountDAOTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A2F4B517815B2D00F2A40C /* AccountDAOTest.m */; };
 		28A2F4BA17815CE500F2A40C /* LocalStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2847BCD7177D6ADB00067186 /* LocalStorage.framework */; };
 		28A2F4BC17815CFB00F2A40C /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 28A2F4BB17815CFB00F2A40C /* libsqlite3.dylib */; };
@@ -83,6 +86,8 @@
 		287AA095177AC7320075AD5A /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
 		287AA097177AC7E30075AD5A /* TransactionDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionDAO.h; sourceTree = "<group>"; };
 		287AA098177AC7E30075AD5A /* TransactionDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionDAO.m; sourceTree = "<group>"; };
+		288F19911783FD600058EFE0 /* TransactionDAOTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionDAOTest.m; sourceTree = "<group>"; };
+		288F1993178401630058EFE0 /* tran_sc1.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tran_sc1.sql; sourceTree = "<group>"; };
 		28A2F4B517815B2D00F2A40C /* AccountDAOTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountDAOTest.m; sourceTree = "<group>"; };
 		28A2F4BB17815CFB00F2A40C /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		28A2F4BE17815F9800F2A40C /* tc2.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tc2.sql; sourceTree = "<group>"; };
@@ -194,6 +199,7 @@
 		282996A017782CB800C64C5F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				288F1993178401630058EFE0 /* tran_sc1.sql */,
 				28A2F4C117815FAD00F2A40C /* tc1.sql */,
 				28A2F4BE17815F9800F2A40C /* tc2.sql */,
 				287733EA1782B17800991FC1 /* tc3.sql */,
@@ -263,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				28A2F4B517815B2D00F2A40C /* AccountDAOTest.m */,
+				288F19911783FD600058EFE0 /* TransactionDAOTest.m */,
 			);
 			path = DAO;
 			sourceTree = "<group>";
@@ -348,6 +355,7 @@
 				28A2F4BF17815F9800F2A40C /* tc2.sql in Resources */,
 				28A2F4C217815FAD00F2A40C /* tc1.sql in Resources */,
 				287733EB1782B17800991FC1 /* tc3.sql in Resources */,
+				288F1994178401630058EFE0 /* tran_sc1.sql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +367,7 @@
 				28A2F4C017815F9800F2A40C /* tc2.sql in Resources */,
 				28A2F4C317815FAD00F2A40C /* tc1.sql in Resources */,
 				287733EC1782B17800991FC1 /* tc3.sql in Resources */,
+				288F1995178401630058EFE0 /* tran_sc1.sql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +438,7 @@
 			files = (
 				2878215B177971A100FF73B7 /* BankAccountTest.m in Sources */,
 				28A2F4B617815B2D00F2A40C /* AccountDAOTest.m in Sources */,
+				288F19921783FD600058EFE0 /* TransactionDAOTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

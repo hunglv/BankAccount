@@ -10,4 +10,16 @@ I, Test Account DAO
 - update account that is exists in database.
 
 II, Test Transaction DAO
-The same test account dao.
+1. Test insert Transaction
+- insert into empty database.
+2. Test get transactions with given account number
+a, get all transaction with given account number
+- in database, there's no transaction with given account number
+- in database, there're some transactions with given account number
+- in database, there're some transactions but there's no transaction with given account number.
+b, get all transaction with given account number, start time, end time
+- in database, there're some transactions with given account number but timeOpened is not into between start time and end time.
+- in database, there're some transactions with given account number but timeOpened is into between start time and end time.
+c, get n newest transaction with given account number.
+- in database, total transactions with given number is less than n.
+- in database, total transactions with given number is more than  or equal n.
