@@ -25,12 +25,52 @@
     return val;
 }
 
+- (Transaction *)transactionParser:(FMResultSet *)r {
+    NSDateFormatter *dateformat = [[NSDateFormatter alloc] init];
+    [dateformat setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
+    Transaction *tran = [[Transaction alloc] init];
+    tran.accountNumber = [r objectForColumnName:@"accountnumber"];
+    tran.amount = [r objectForColumnName:@"amount"];
+    tran.description = [r objectForColumnName:@"description"];
+    tran.timeStamp = [dateformat dateFromString:[r objectForColumnName:@"timestamp"]];
+    return tran;
+}
+
 -(NSArray *)transactionOccuredWithAccountNumber:(NSString *)accNum {
-    return nil;
+    __block NSMutableArray *result;
+    [dataAccessHelper inTransaction:^(FMDatabase *db, BOOL *rollback) {        
+        NSString *stm = [NSString stringWithFormat:@"select * from tran where accountnumber = '%@'", accNum];
+        FMResultSet *r = [db executeQuery:stm];
+        result = [[NSMutableArray alloc] init];
+        while ([r next]) {
+            Transaction *tran;
+            tran = [self transactionParser:r];
+            [result addObject:tran];
+        }
+
+    }];
+    return result;
 }
 
 -(NSArray *)transactionOccuredWithAccountNumber:(NSString *)accNum startTime:(NSDate *)start endTime:(NSDate *)end {
-    return nil;
+    __block NSMutableArray *result;
+    [dataAccessHelper inTransaction:^(FMDatabase *db, BOOL *rollback) {
+        NSDateFormatter *datefomater = [[NSDateFormatter alloc] init];
+        [datefomater setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
+        NSString *startTime = [datefomater stringFromDate:start];
+        NSString *entime = [datefomater stringFromDate:end];
+        NSString *stm = [NSString stringWithFormat:@"select * from tran where accountnumber = '%@' and timestamp > '%@' and timestamp < '%@'", accNum, startTime, entime];
+        assert([db validateSQL:stm error:nil]);
+        FMResultSet *r = [db executeQuery:stm];
+        result = [[NSMutableArray alloc] init];
+        while ([r next]) {
+            Transaction *tran;
+            tran = [self transactionParser:r];
+            [result addObject:tran];
+        }
+        
+    }];
+    return result;
 }
 
 - (NSArray *)transactionOccuredWithAccountNumber:(NSString *)accNum numberTransactions:(NSNumber *)number {

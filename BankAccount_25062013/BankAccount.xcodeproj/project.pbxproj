@@ -30,6 +30,10 @@
 		28782168177973DB00FF73B7 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 28782167177973DB00FF73B7 /* Account.m */; };
 		287AA096177AC7320075AD5A /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 287AA095177AC7320075AD5A /* Transaction.m */; };
 		287AA099177AC7E30075AD5A /* TransactionDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 287AA098177AC7E30075AD5A /* TransactionDAO.m */; };
+		287FE84717855130009982D8 /* tran_sc2.sql in Resources */ = {isa = PBXBuildFile; fileRef = 287FE84617855130009982D8 /* tran_sc2.sql */; };
+		287FE84817855130009982D8 /* tran_sc2.sql in Resources */ = {isa = PBXBuildFile; fileRef = 287FE84617855130009982D8 /* tran_sc2.sql */; };
+		287FE84A17855571009982D8 /* tran_sc3.sql in Resources */ = {isa = PBXBuildFile; fileRef = 287FE84917855570009982D8 /* tran_sc3.sql */; };
+		287FE84B17855571009982D8 /* tran_sc3.sql in Resources */ = {isa = PBXBuildFile; fileRef = 287FE84917855570009982D8 /* tran_sc3.sql */; };
 		288F19921783FD600058EFE0 /* TransactionDAOTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 288F19911783FD600058EFE0 /* TransactionDAOTest.m */; };
 		288F1994178401630058EFE0 /* tran_sc1.sql in Resources */ = {isa = PBXBuildFile; fileRef = 288F1993178401630058EFE0 /* tran_sc1.sql */; };
 		288F1995178401630058EFE0 /* tran_sc1.sql in Resources */ = {isa = PBXBuildFile; fileRef = 288F1993178401630058EFE0 /* tran_sc1.sql */; };
@@ -86,6 +90,8 @@
 		287AA095177AC7320075AD5A /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
 		287AA097177AC7E30075AD5A /* TransactionDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionDAO.h; sourceTree = "<group>"; };
 		287AA098177AC7E30075AD5A /* TransactionDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionDAO.m; sourceTree = "<group>"; };
+		287FE84617855130009982D8 /* tran_sc2.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tran_sc2.sql; sourceTree = "<group>"; };
+		287FE84917855570009982D8 /* tran_sc3.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tran_sc3.sql; sourceTree = "<group>"; };
 		288F19911783FD600058EFE0 /* TransactionDAOTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionDAOTest.m; sourceTree = "<group>"; };
 		288F1993178401630058EFE0 /* tran_sc1.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tran_sc1.sql; sourceTree = "<group>"; };
 		28A2F4B517815B2D00F2A40C /* AccountDAOTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountDAOTest.m; sourceTree = "<group>"; };
@@ -199,12 +205,14 @@
 		282996A017782CB800C64C5F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				287FE84617855130009982D8 /* tran_sc2.sql */,
 				288F1993178401630058EFE0 /* tran_sc1.sql */,
 				28A2F4C117815FAD00F2A40C /* tc1.sql */,
 				28A2F4BE17815F9800F2A40C /* tc2.sql */,
 				287733EA1782B17800991FC1 /* tc3.sql */,
 				282996A117782CB800C64C5F /* BankAccountTests-Info.plist */,
 				282996A217782CB800C64C5F /* InfoPlist.strings */,
+				287FE84917855570009982D8 /* tran_sc3.sql */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -356,6 +364,8 @@
 				28A2F4C217815FAD00F2A40C /* tc1.sql in Resources */,
 				287733EB1782B17800991FC1 /* tc3.sql in Resources */,
 				288F1994178401630058EFE0 /* tran_sc1.sql in Resources */,
+				287FE84717855130009982D8 /* tran_sc2.sql in Resources */,
+				287FE84A17855571009982D8 /* tran_sc3.sql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +378,8 @@
 				28A2F4C317815FAD00F2A40C /* tc1.sql in Resources */,
 				287733EC1782B17800991FC1 /* tc3.sql in Resources */,
 				288F1995178401630058EFE0 /* tran_sc1.sql in Resources */,
+				287FE84817855130009982D8 /* tran_sc2.sql in Resources */,
+				287FE84B17855571009982D8 /* tran_sc3.sql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
