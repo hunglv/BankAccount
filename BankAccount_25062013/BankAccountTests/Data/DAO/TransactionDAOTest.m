@@ -106,6 +106,35 @@ describe(@"TransactionDAO test", ^{
             [[theValue(allTrans.count) should] equal:theValue(3)];
         });
     });
+    
+    context(@"get n newest transaction with given account number", ^{
+        it(@"in database, total transactions with given number is less than n. There're 5 trans in db, allTrans.count should return 5", ^{
+            accNumber = @"0123456789";            
+            NSString *scriptFilePath = [[NSBundle mainBundle] pathForResource:@"tran_sc4" ofType:@"sql"];
+            [env loadScriptFile:scriptFilePath];
+            
+            NSArray *allTrans = [sut transactionOccuredWithAccountNumber:accNumber numberTransactions:@10];
+            [allTrans shouldNotBeNil];
+            [[theValue(allTrans.count) should] equal:theValue(5)];
+        });
+        
+        it(@"total transactions with given number is more than  or equal n. allTrans[0] should have timeOpened is 2012-01-01 23:12:16", ^{
+            accNumber = @"0123456789";
+            NSString *scriptFilePath = [[NSBundle mainBundle] pathForResource:@"tran_sc5" ofType:@"sql"];
+            [env loadScriptFile:scriptFilePath];
+            
+            NSArray *allTrans = [sut transactionOccuredWithAccountNumber:accNumber numberTransactions:@10];
+            [allTrans shouldNotBeNil];
+            [[theValue(allTrans.count) should] equal:theValue(10)];
+            
+            Transaction *firstObject = [allTrans objectAtIndex:0];
+            NSDateFormatter *dateFomater = [[NSDateFormatter alloc] init];
+            [dateFomater setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
+            NSString *timeLast = [dateFomater stringFromDate:firstObject.timeStamp];
+            [[timeLast should] equal:@"2012-01-01 23:12:16"];
+        });
+        
+    });
         
 });
 SPEC_END

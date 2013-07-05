@@ -22,6 +22,10 @@
 		282996A417782CB800C64C5F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 282996A217782CB800C64C5F /* InfoPlist.strings */; };
 		2847BCD8177D6ADB00067186 /* LocalStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2847BCD7177D6ADB00067186 /* LocalStorage.framework */; };
 		2847BCDA177D6AFE00067186 /* todo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2847BCD9177D6AFE00067186 /* todo.txt */; };
+		286DBC151786A0CF0079111B /* tran_sc4.sql in Resources */ = {isa = PBXBuildFile; fileRef = 286DBC141786A0CF0079111B /* tran_sc4.sql */; };
+		286DBC161786A0CF0079111B /* tran_sc4.sql in Resources */ = {isa = PBXBuildFile; fileRef = 286DBC141786A0CF0079111B /* tran_sc4.sql */; };
+		286DBC181786A3CA0079111B /* tran_sc5.sql in Resources */ = {isa = PBXBuildFile; fileRef = 286DBC171786A3CA0079111B /* tran_sc5.sql */; };
+		286DBC191786A3CA0079111B /* tran_sc5.sql in Resources */ = {isa = PBXBuildFile; fileRef = 286DBC171786A3CA0079111B /* tran_sc5.sql */; };
 		287733EB1782B17800991FC1 /* tc3.sql in Resources */ = {isa = PBXBuildFile; fileRef = 287733EA1782B17800991FC1 /* tc3.sql */; };
 		287733EC1782B17800991FC1 /* tc3.sql in Resources */ = {isa = PBXBuildFile; fileRef = 287733EA1782B17800991FC1 /* tc3.sql */; };
 		2878215B177971A100FF73B7 /* BankAccountTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2878215A177971A100FF73B7 /* BankAccountTest.m */; };
@@ -78,6 +82,8 @@
 		282996A317782CB800C64C5F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2847BCD7177D6ADB00067186 /* LocalStorage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LocalStorage.framework; sourceTree = "<group>"; };
 		2847BCD9177D6AFE00067186 /* todo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo.txt; sourceTree = "<group>"; };
+		286DBC141786A0CF0079111B /* tran_sc4.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tran_sc4.sql; sourceTree = "<group>"; };
+		286DBC171786A3CA0079111B /* tran_sc5.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tran_sc5.sql; sourceTree = "<group>"; };
 		287733EA1782B17800991FC1 /* tc3.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tc3.sql; sourceTree = "<group>"; };
 		2878215A177971A100FF73B7 /* BankAccountTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankAccountTest.m; sourceTree = "<group>"; };
 		28782160177971EE00FF73B7 /* BankAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankAccount.h; sourceTree = "<group>"; };
@@ -213,6 +219,8 @@
 				282996A117782CB800C64C5F /* BankAccountTests-Info.plist */,
 				282996A217782CB800C64C5F /* InfoPlist.strings */,
 				287FE84917855570009982D8 /* tran_sc3.sql */,
+				286DBC141786A0CF0079111B /* tran_sc4.sql */,
+				286DBC171786A3CA0079111B /* tran_sc5.sql */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -366,6 +374,8 @@
 				288F1994178401630058EFE0 /* tran_sc1.sql in Resources */,
 				287FE84717855130009982D8 /* tran_sc2.sql in Resources */,
 				287FE84A17855571009982D8 /* tran_sc3.sql in Resources */,
+				286DBC151786A0CF0079111B /* tran_sc4.sql in Resources */,
+				286DBC181786A3CA0079111B /* tran_sc5.sql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +390,8 @@
 				288F1995178401630058EFE0 /* tran_sc1.sql in Resources */,
 				287FE84817855130009982D8 /* tran_sc2.sql in Resources */,
 				287FE84B17855571009982D8 /* tran_sc3.sql in Resources */,
+				286DBC161786A0CF0079111B /* tran_sc4.sql in Resources */,
+				286DBC191786A3CA0079111B /* tran_sc5.sql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

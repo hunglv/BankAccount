@@ -74,7 +74,20 @@
 }
 
 - (NSArray *)transactionOccuredWithAccountNumber:(NSString *)accNum numberTransactions:(NSNumber *)number {
-    return nil;
+    __block NSMutableArray *result;
+    [dataAccessHelper inTransaction:^(FMDatabase *db, BOOL *rollback) {
+        NSString *stm = [NSString stringWithFormat:@"select * from tran where accountnumber = '%@' order by timestamp desc limit %@ ", accNum, number];
+        assert([db validateSQL:stm error:nil]);
+        FMResultSet *r = [db executeQuery:stm];
+        result = [[NSMutableArray alloc] init];
+        while ([r next]) {
+            Transaction *tran;
+            tran = [self transactionParser:r];
+            [result addObject:tran];
+        }
+        
+    }];
+    return result;
 }
 
 @end

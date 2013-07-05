@@ -1,0 +1,14 @@
+CREATE TABLE Tran (transactionid integer PRIMARY KEY AUTOINCREMENT,accountnumber text,amount double,description text,timestamp text);
+INSERT INTO Tran ( transactionid,accountnumber,amount,description,timestamp ) VALUES ( '1','0123456789','50.0','','2012-01-01 12:12:12' );
+INSERT INTO Tran ( transactionid,accountnumber,amount,description,timestamp ) VALUES ( '2','0123456789','50.0','','2012-01-01 12:12:13' );
+INSERT INTO Tran ( transactionid,accountnumber,amount,description,timestamp ) VALUES ( '3','0123456789','50.0','','2012-01-01 12:12:14' );
+INSERT INTO Tran ( transactionid,accountnumber,amount,description,timestamp ) VALUES ( '4','0123456789','50.0','','2012-01-01 12:12:15' );
+INSERT INTO Tran ( transactionid,accountnumber,amount,description,timestamp ) VALUES ( '5','0123456789','50.0','','2012-01-01 12:12:16' );
+INSERT INTO Tran ( transactionid,accountnumber,amount,description,timestamp ) VALUES ( '6','0123456789','50.0','','2012-01-01 12:12:17' );
+INSERT INTO Tran ( transactionid,accountnumber,amount,description,timestamp ) VALUES ( '7','0123456789','50.0','','2012-01-01 12:12:23' );
+INSERT INTO Tran ( transactionid,accountnumber,amount,description,timestamp ) VALUES ( '8','0123456789','50.0','','2012-01-01 12:12:25' );
+INSERT INTO Tran ( transactionid,accountnumber,amount,description,timestamp ) VALUES ( '9','0123456789','50.0','','2012-01-01 12:12:22' );
+INSERT INTO Tran ( transactionid,accountnumber,amount,description,timestamp ) VALUES ( '10','0123456789','50.0','','2012-01-01 12:12:30' );
+INSERT INTO Tran ( transactionid,accountnumber,amount,description,timestamp ) VALUES ( '11','0123456789','50.0','','2012-01-01 12:14:19' );
+INSERT INTO Tran ( transactionid,accountnumber,amount,description,timestamp ) VALUES ( '12','0123456789','50.0','','2012-01-01 23:12:16' );
+INSERT INTO Tran ( transactionid,accountnumber,amount,description,timestamp ) VALUES ( '13','0123456789','50.0','','2012-01-01 11:12:33' );
